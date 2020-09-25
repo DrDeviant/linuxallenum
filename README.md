@@ -8,7 +8,7 @@ Over 100 tools and utilities:
 - delete logs;
 - local privesc;
 - local exploits;
-- dump credentials;
+- dump credentials and packets;
 - enumerations;
 - hack protocols and containers;
 - tunnelling;
