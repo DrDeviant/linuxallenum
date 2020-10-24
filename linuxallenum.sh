@@ -58,7 +58,7 @@ while true; do
 	echo -ne " 6. belane/linux-soft-exploit-suggester\t\t\t7. mzet-/linux-exploit-suggester\n"
 	echo -ne " 8. carlospolop/privilege-escalation-awesome-scripts-suite/linPEAS\n"
 	echo -ne " 9. InteliSecureLabs/Linux_Exploit_Suggester/Linux_Exploit_Suggester\n"
-	echo -ne " 138. diego-treitos/linux-smart-enumeration/lse\n"
+	echo -ne " 138. diego-treitos/linux-smart-enumeration/lse\t\t159. DominicBreuker/pspy64s\t\t160. DominicBreuker/pspy32s\n"
 	echo "EVASION"
 	echo -ne " 22. cytopia/pwncat\n"
 	echo "EXPLOIT"
@@ -566,6 +566,12 @@ while true; do
 	;;
 	"158")
 		Scarica "mikeborghi/pywallet" "$ENTRAW""mikeborghi/pywallet/master/pywallet.py" "pywallet.py"
+	;;
+	"159")
+		Scarica "DominicBreuker/pspy64s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy64s" "pspy64s"
+	;;
+	"160")
+		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy32s" "pspy32s"
 	;;
 	*)
 		echo "error, invalid choice"
