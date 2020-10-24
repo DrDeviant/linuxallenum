@@ -31,7 +31,8 @@ function Scarica
 	fi
 	if [[ -f ./$3 ]];
 	then
-		echo "$3"" downloaded"
+		chmod +x ./$3
+		echo "$3"" downloaded and runnable!"
 	else
 		echo "ERROR: download failed"
 	fi
