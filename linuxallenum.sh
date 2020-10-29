@@ -143,7 +143,7 @@ while true; do
 		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux/local/"
 		echo "Digit a file name from ""$ENTSSL""$OFFSEC""tree/master/exploits/linux/local with extension"
 		echo "(example exploit.py)"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""offensive-security/exploitdb/tree/master/exploits/linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/master/exploits/linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 		do
 			wget "$ENTTO""$EXP"
 			break
@@ -156,7 +156,7 @@ while true; do
 		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86-64/local/"
 		echo "Digit a file name from ""$ENTSSL""$OFFSEC""tree/master/exploits/linux_x86-64/local with extension"
 		echo "(example exploit.py)"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""offensive-security/exploitdb/tree/master/exploits/linux_x86-64/local"| grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC"tree/master/exploits/linux_x86-64/local"| grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 		do
 			wget "$ENTTO""$EXP"
 			break
@@ -169,7 +169,7 @@ while true; do
 		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86/local/"
 		echo "Digit a file name from ""$ENTSSL""$OFFSEC""tree/master/exploits/linux_x86/local with extension"
 		echo "(example exploit.py)"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""offensive-security/exploitdb/tree/master/exploits/linux_x86/local"| grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC"tree/master/exploits/linux_x86/local"| grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 		do
 			wget "$ENTTO""$EXP"
 			break
