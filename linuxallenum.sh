@@ -137,40 +137,61 @@ while true; do
 		Scarica "InteliSecureLabs/Linux_Exploit_Suggester/Linux_Exploit_Suggester" "$ENTRAW""InteliSecureLabs/Linux_Exploit_Suggester/master/Linux_Exploit_Suggester.pl" "Linux_Exploit_Suggester.pl"
 	;;
 	"10")
-		OFFSEC="offensive-security/exploitdb/"
-		MEX="master/exploits/"
-		ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux/local/"
-		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux/local/"
-		echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux/local"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
-		do
-			Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
-			break
-		done
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux/local/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux/local/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux/local"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux/local/$FILE" "$FILE"
+		fi
 	;;
 	"11")
-		OFFSEC="offensive-security/exploitdb/"
-		MEX="master/exploits/"
-		ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86-64/local/"
-		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86-64/local/"
-		echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
-		do
-			Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
-			break
-		done
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86-64/local/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86-64/local/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux_x86-64/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86-64/local/$FILE" "$FILE"
+		fi
 	;;
 	"12")
-		OFFSEC="offensive-security/exploitdb/"
-		MEX="master/exploits/"
-		ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86/local/"
-		ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86/local/"
-		echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local"
-		select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
-		do
-			Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
-			break
-		done
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86/local/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86/local/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux_x86/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86/local/$FILE" "$FILE"
+		fi
 	;;
 	"20")
 		Scarica "skelsec/jackdaw/" "$ENTSSL""skelsec/jackdaw/archive/master.zip" "jackdaw.zip"
