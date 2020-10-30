@@ -152,7 +152,7 @@ while true; do
 		else
 			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux/local with extension"
 			read -p "(example exploit.py): " FILE
-			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux/local/$FILE" "$FILE"
+			Scarica "offensive-security/exploitdb/exploits/linux/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux/local/""$FILE" "$FILE"
 		fi
 	;;
 	"11")
@@ -171,7 +171,7 @@ while true; do
 		else
 			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux_x86-64/local with extension"
 			read -p "(example exploit.py): " FILE
-			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86-64/local/$FILE" "$FILE"
+			Scarica "offensive-security/exploitdb/exploits/linux/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86-64/local/""$FILE" "$FILE"
 		fi
 	;;
 	"12")
@@ -190,7 +190,7 @@ while true; do
 		else
 			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/linux_x86/local with extension"
 			read -p "(example exploit.py): " FILE
-			Scarica "github - offensive-security/exploitdb - exploits/linux/local/" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86/local/$FILE" "$FILE"
+			Scarica "offensive-security/exploitdb/exploits/linux/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/linux_x86/local/""$FILE" "$FILE"
 		fi
 	;;
 	"20")
