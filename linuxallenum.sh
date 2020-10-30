@@ -144,7 +144,7 @@ while true; do
 			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux/local/"
 			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux/local/"
 			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$|\.go$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
@@ -163,7 +163,7 @@ while true; do
 			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86-64/local/"
 			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86-64/local/"
 			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$|\.go$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
@@ -182,7 +182,7 @@ while true; do
 			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86/local/"
 			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86/local/"
 			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local" | grep -E "\.sh$|\.py$|\.c$|\.pl$|\.rb$|\.asm$|\.txt$|\.java$|\.php$|\.pas$|\.html$|\.md$|\.go$" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
