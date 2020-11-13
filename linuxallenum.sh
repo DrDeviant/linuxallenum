@@ -86,7 +86,7 @@ while true; do
 	echo -ne " 151. vulmon/Vulmap/Vulmap-Linux\n"
 	echo "TUNNELING"
 	echo -ne " 21. T3rry7f/ICMPTunnel/IcmpTunnel_C\t\t\t133. blackarrowsec/mssqlproxy/mssqlclient\n"
-	echo -ne " 137. sensepost/DNS-Shell\n"
+	echo -ne " 137. sensepost/DNS-Shell\t\t\t\t163. jpillora/chisel_1.7.2\n"
 	echo "UPNP"
 	echo -ne " 130. tenable/upnp_info\n"
 	echo "UTILITIES"
@@ -628,6 +628,9 @@ while true; do
 		Scarica "TryCatchHCF/PacketWhisper/cloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/cloakify.py" "cloakify.py"
 		Scarica "TryCatchHCF/PacketWhisper/decloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/decloakify.py" "decloakify.py"
 		Scarica "TryCatchHCF/PacketWhisper/packetWhisper" "$ENTRAW""TryCatchHCF/PacketWhisper/master/packetWhisper.py" "packetWhisper.py"
+	;; 
+	"163")
+		Scarica "jpillora/chisel_1.7.2" "$ENTSSL""jpillora/chisel/releases/download/v1.7.2/chisel_1.7.2_linux_amd64.gz" "chisel_1.7.2_linux_amd64.gz"
 	;;
 	*)
 		echo "error, invalid choice"
