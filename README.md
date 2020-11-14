@@ -16,4 +16,4 @@ Over 100 tools and utilities:
 
 and much more...
 
-Happy hacking!
+Please, share and starring my repos, follow me and... Happy hacking!
