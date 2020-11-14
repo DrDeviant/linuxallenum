@@ -45,6 +45,8 @@ while true; do
 	echo "0. exit"
 	echo "ACTIVE DIRECTORY"
 	echo -ne " 20. skelsec/jackdaw\t\t\t\t\t139. DanMcInerney/icebreaker\n"
+	echo "ANTIFORENSICS - STEGANOGRAPHY"
+	echo -ne " 166. KuroLabs/stegcloak\n"
 	echo "CRACK"
 	echo -ne " 30. Greenwolf/spray\t\t\t\t\t31. NetSPI/PS_MultiCrack\t\t\t32. TiagoANeves/TDTLinuxPWD\n"
 	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\n"
@@ -638,6 +640,9 @@ while true; do
 	;; 
 	"165")
 		Scarica "pahaz/sshtunnel" "$ENTSSL""pahaz/sshtunnel/archive/master.zip" "sshtunnel.zip"
+	;; 
+	"166")
+		Scarica "KuroLabs/stegcloak" "$ENTSSL""KuroLabs/stegcloak/archive/master.zip" "stegcloak.zip"
 	;;
 	*)
 		echo "error, invalid choice"
