@@ -18,6 +18,7 @@ fi
 ENTSSL="https://github.com/"
 ENTRAW="https://raw.githubusercontent.com/"
 GSTRAW="https://gist.githubusercontent.com/"
+EXDB=""
 
 function Scarica
 {
@@ -643,6 +644,14 @@ while true; do
 	;; 
 	"166")
 		Scarica "KuroLabs/stegcloak" "$ENTSSL""KuroLabs/stegcloak/archive/master.zip" "stegcloak.zip"
+	;;
+	"167")
+		echo "Digit an exploit file name without extension"
+		read -p "(example, 460): " EXPL
+		if [[ "$EXPL" != "" ]];
+		then
+			Scarica "https://www.exploit-db.com/download/""$EXPL"
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
