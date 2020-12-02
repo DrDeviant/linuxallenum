@@ -18,7 +18,7 @@ fi
 ENTSSL="https://github.com/"
 ENTRAW="https://raw.githubusercontent.com/"
 GSTRAW="https://gist.githubusercontent.com/"
-EXDB=""
+EXDB="https://www.exploit-db.com/"
 
 function Scarica
 {
@@ -67,9 +67,10 @@ while true; do
 	echo "EVASION"
 	echo -ne " 22. cytopia/pwncat\n"
 	echo "EXPLOIT"
-	echo " 10. github - offensive-security/exploitdb - exploits/linux/local/"
-	echo " 11. github - offensive-security/exploitdb - exploits/linux_x86-64/local/"
-	echo " 12. github - offensive-security/exploitdb - exploits/linux_x86/local/"
+	echo " 10. github - offensive-security/exploitdb - exploits/linux/local"
+	echo " 11. github - offensive-security/exploitdb - exploits/linux_x86-64/local"
+	echo " 12. github - offensive-security/exploitdb - exploits/linux_x86/local"
+	echo -ne " 167. exploit-db all exploits\n"
 	echo "GATHERING"
 	echo -ne " 157. HightechSec/git-scanner/gitscanner\n"
 	echo "HASH"
@@ -650,7 +651,7 @@ while true; do
 		read -p "(example, 460): " EXPL
 		if [[ "$EXPL" != "" ]];
 		then
-			Scarica "https://www.exploit-db.com/download/""$EXPL"
+			Scarica "$EXDB""$EXPL" "$EXDB""download/""$EXPL" "$EXPL"
 		fi
 	;;
 	*)
