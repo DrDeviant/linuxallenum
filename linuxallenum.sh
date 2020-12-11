@@ -660,15 +660,15 @@ while true; do
 		read -p "(example, xml): " EXT
 		if [[ "$EXT" != "" ]];
 		then
-			echo "Digit one or more keywords to search, separated by a space"
-			read -p "(example, password passwd): " PSKEY
+			echo "Digit one or more keywords to search, separated by a bckslash and pipe"
+			read -p "(example, password\|passwd): " PSKEY
 			if [[ "$PSKEY" != "" ]];
 			then
 				echo "Digit a path to search"
 				read -p "(example, /home/user): " FLDR
 				if [[ -d "$FLDR" ]];
 				then
-					grep -ir "$PSKEY" --include "*.""$EXT" "$FLDR"
+					grep -ir -w "$PSKEY" --include "*.""$EXT" "$FLDR"
 				fi
 			fi
 		fi
