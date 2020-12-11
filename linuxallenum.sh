@@ -104,7 +104,8 @@ while true; do
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. socat port forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
-	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\n"
+	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
+	echo -ne " 168. search keywords inside files in specific folder\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -652,6 +653,24 @@ while true; do
 		if [[ "$EXPL" != "" ]];
 		then
 			Scarica "$EXDB""$EXPL" "$EXDB""download/""$EXPL" "$EXPL"
+		fi
+	;;
+	"168")
+		echo "Digit a file extension without dot"
+		read -p "(example, xml): " EXT
+		if [[ "$EXT" != "" ]];
+		then
+			echo "Digit one or more keywords to search, separated by a space"
+			read -p "(example, password passwd): " PSKEY
+			if [[ "$PSKEY" != "" ]];
+			then
+				echo "Digit a path to search"
+				read -p "(example, /home/user): " FLDR
+				if [[ -d "$FLDR" ]];
+				then
+					grep -ir "$PSKEY" --include "*.""$EXT" "$FLDR"
+				fi
+			fi
 		fi
 	;;
 	*)
