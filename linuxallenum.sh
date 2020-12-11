@@ -668,7 +668,7 @@ while true; do
 				read -p "(example, /home/user): " FLDR
 				if [[ -d "$FLDR" ]];
 				then
-					grep -ir -w "$PSKEY" --include "*.""$EXT" "$FLDR"
+					grep -ir -w "$PSKEY" --include "*.""$EXT" "$FLDR" 2>/dev/null
 				fi
 			fi
 		fi
