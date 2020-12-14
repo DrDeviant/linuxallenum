@@ -81,6 +81,8 @@ while true; do
 	echo -ne " 40. dinigalab/ldapsearch\n"
 	echo "MISC"
 	echo -ne " 41. SecureAuthCorp/impacket\n"
+	echo "MITM"
+	echo -ne " 170. bettercap/bettercap\n"
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
 	echo "REVSHELL"
@@ -675,6 +677,9 @@ while true; do
 	;;
 	"169")
 		echo 'stats items' | nc localhost 11211 | grep -oe ':[0-9]*:' | grep -oe '[0-9]*' | sort | uniq | xargs -L1 -I{} bash -c 'echo "stats cachedump {} 1000" | nc localhost 11211'
+	;; 
+	"170")
+		Scarica "bettercap/bettercap" "$ENTSSL""bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip" "bettercap_amd64_v2.28.zip"
 	;;
 	*)
 		echo "error, invalid choice"
