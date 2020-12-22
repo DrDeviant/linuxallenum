@@ -28,7 +28,7 @@ function Scarica
 		$WGETP --no-check-certificate "$2" -O "$3"
 	elif [[ "$WGET" == "1" ]];
 	then
-		$CURLP -k -o "$3" "$2"
+		$CURLP -k -L -o "$3" "$2"
 	fi
 	if [[ -f ./$3 ]];
 	then
