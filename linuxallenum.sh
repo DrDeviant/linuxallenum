@@ -54,7 +54,8 @@ while true; do
 	echo "DNS"
 	echo -ne " 33. m57/dnsteal\n"
 	echo "DOCKER"
-	echo -ne " 172. Keramas/Blowhole\t\t\t\t\t173. stealthcopter/deepce\n"
+	echo -ne " 172. Keramas/Blowhole\t\t\t\t\t173. stealthcopter/deepce\t\t\t175. nccgroup/go-pillage-registries_1.0_Linux_i386\n"
+	echo -ne " 176. nccgroup/go-pillage-registries_1.0_Linux_x86_64\n"
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
 	echo -ne " 50. vocytopialatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t\t158. mikeborghi/pywallet\n"
@@ -705,6 +706,12 @@ while true; do
 		then
 			tar zxvf "$FLTR"
 		fi
+	;; 
+	"175")
+		Scarica "nccgroup/go-pillage-registries_1.0_Linux_i386" "$ENTSSL""nccgroup/go-pillage-registries/releases/download/v1.0/go-pillage-registries_1.0_Linux_i386.tar.gz" "go-pillage-registries_1.0_Linux_i386.tar.gz"
+	;;
+	"176")
+		Scarica "nccgroup/go-pillage-registries_1.0_Linux_x86_64" "$ENTSSL""nccgroup/go-pillage-registries/releases/download/v1.0/go-pillage-registries_1.0_Linux_x86_64.tar.gz" "go-pillage-registries_1.0_Linux_x86_64.tar.gz"
 	;;
 	*)
 		echo "error, invalid choice"
