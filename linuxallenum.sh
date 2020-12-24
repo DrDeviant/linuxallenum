@@ -54,7 +54,7 @@ while true; do
 	echo "DNS"
 	echo -ne " 33. m57/dnsteal\n"
 	echo "DOCKER"
-	echo -ne " 172. Keramas/Blowhole\n"
+	echo -ne " 172. Keramas/Blowhole\t\t\t\t\t173. stealthcopter/deepce\n"
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
 	echo -ne " 50. vocytopialatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t\t158. mikeborghi/pywallet\n"
@@ -693,6 +693,9 @@ while true; do
 	;; 
 	"172")
 		Scarica "Keramas/Blowhole" "$ENTRAW""Keramas/Blowhole/master/blowhole.py" "blowhole.py"
+	;; 
+	"173")
+		Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
 	;;
 	*)
 		echo "error, invalid choice"
