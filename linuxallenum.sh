@@ -110,7 +110,7 @@ while true; do
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
 	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
-	echo -ne " 171. escape from Docker method 1\n"
+	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -696,6 +696,14 @@ while true; do
 	;; 
 	"173")
 		Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
+	;; 
+	"174")
+		echo "Digit a tar.gz file full path to extract"
+		read -p "(example, ./example.tar.gz): " FLTR
+		if [[ -f "$FLTR" ]];
+		then
+			tar zxvf "$FLTR"
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
