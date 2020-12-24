@@ -699,6 +699,7 @@ while true; do
 	;; 
 	"174")
 		echo "Digit a tar.gz file full path to extract"
+		ls *.tar.gz
 		read -p "(example, ./example.tar.gz): " FLTR
 		if [[ -f "$FLTR" ]];
 		then
