@@ -59,7 +59,7 @@ while true; do
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
 	echo -ne " 50. vocytopialatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t\t158. mikeborghi/pywallet\n"
-	echo -ne " 162. TryCatchHCF/PacketWhisper\n"
+	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t180. hasanbulat/tshark/dumpcap\n"
 	echo "ENUMERATION"
 	echo -ne " 1. rebootuser/LinEnum\t\t\t\t\t134. jtpereyda/enum4linux\t\t\t2. Arr0way/linux-local-enumeration-script\n"
 	echo -ne " 3. sleventyeleven/linuxprivchecker\t\t\t4. jondonas/linux-exploit-suggester-2\t\t5. TheSecondSun/Bashark\n"
@@ -748,6 +748,9 @@ while true; do
 	;;
 	"179")
 		Scarica "hasanbulat/tshark" "$ENTSSL""hasanbulat/tshark/raw/master/bin/tshark" "tshark"
+	;;
+	"180")
+		Scarica "hasanbulat/tshark/dumpcap" "$ENTSSL""hasanbulat/tshark/raw/master/bin/dumpcap" "dumpcap"
 	;;
 	*)
 		echo "error, invalid choice"
