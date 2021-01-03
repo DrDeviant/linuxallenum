@@ -84,8 +84,8 @@ while true; do
 	echo -ne " 40. dinigalab/ldapsearch\n"
 	echo "MISC"
 	echo -ne " 41. SecureAuthCorp/impacket\n"
-	echo "MITM"
-	echo -ne " 170. bettercap/bettercap\n"
+	echo "MITM - SNIFFING"
+	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark\n"
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
 	echo "REVSHELL"
@@ -745,6 +745,9 @@ while true; do
 		else
 			echo "strace not found!"
 		fi
+	;;
+	"179")
+		Scarica "hasanbulat/tshark" "$ENTSSL""hasanbulat/tshark/raw/master/bin/tshark" "tshark"
 	;;
 	*)
 		echo "error, invalid choice"
