@@ -67,6 +67,7 @@ while true; do
 	echo -ne " 8. carlospolop/privilege-escalation-awesome-scripts-suite/linPEAS\n"
 	echo -ne " 9. InteliSecureLabs/Linux_Exploit_Suggester/Linux_Exploit_Suggester\n"
 	echo -ne " 138. diego-treitos/linux-smart-enumeration/lse\t\t159. DominicBreuker/pspy64s\t\t160. DominicBreuker/pspy32s\n"
+	echo -ne " 181. dylanaraps/neofetch\n"
 	echo "EVASION"
 	echo -ne " 22. cytopia/pwncat\n"
 	echo "EXPLOIT"
@@ -752,7 +753,7 @@ while true; do
 	"180")
 		Scarica "hasanbulat/tshark/dumpcap" "$ENTSSL""hasanbulat/tshark/raw/master/bin/dumpcap" "dumpcap"
 	;;
-	"180")
+	"181")
 		Scarica "dylanaraps/neofetch" "$ENTRAW""dylanaraps/neofetch/master/neofetch" "neofetch"
 		Scarica "dylanaraps/neofetch/neofetch.1" "$ENTRAW""dylanaraps/neofetch/master/neofetch.1" "neofetch.1"
 	;;
