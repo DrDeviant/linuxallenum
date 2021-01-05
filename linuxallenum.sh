@@ -752,6 +752,10 @@ while true; do
 	"180")
 		Scarica "hasanbulat/tshark/dumpcap" "$ENTSSL""hasanbulat/tshark/raw/master/bin/dumpcap" "dumpcap"
 	;;
+	"180")
+		Scarica "dylanaraps/neofetch" "$ENTRAW""dylanaraps/neofetch/master/neofetch" "neofetch"
+		Scarica "dylanaraps/neofetch/neofetch.1" "$ENTRAW""dylanaraps/neofetch/master/neofetch.1" "neofetch.1"
+	;;
 	*)
 		echo "error, invalid choice"
 	;;
