@@ -644,10 +644,10 @@ while true; do
 		Scarica "TryCatchHCF/PacketWhisper/packetWhisper" "$ENTRAW""TryCatchHCF/PacketWhisper/master/packetWhisper.py" "packetWhisper.py"
 	;; 
 	"163")
-		Scarica "jpillora/chisel_1.7.2_linux_amd64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.2/chisel_1.7.2_linux_amd64.gz" "chisel_1.7.2_linux_amd64.gz"
+		Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_amd64.gz" "chisel_1.7.4_linux_amd64.gz"
 	;; 
 	"164")
-		Scarica "jpillora/chisel_1.7.2_linux_386" "$ENTSSL""jpillora/chisel/releases/download/v1.7.2/chisel_1.7.2_linux_386.gz" "chisel_1.7.2_linux_386.gz"
+		Scarica "jpillora/chisel_1.7.4_linux_386" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_386.gz" "chisel_1.7.4_linux_386.gz"
 	;; 
 	"165")
 		Scarica "pahaz/sshtunnel" "$ENTSSL""pahaz/sshtunnel/archive/master.zip" "sshtunnel.zip"
