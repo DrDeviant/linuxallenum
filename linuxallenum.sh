@@ -765,7 +765,7 @@ while true; do
 		read -p "(example, perl -e 'print \"A\" x 65536'): " CMD
 		if [[ "$CMD" != "" ]];
 		then
-			sudoedit -s '\' `$CMD` 
+			sudoedit -s '\' `$CMD`
 		fi
 	;;
 	*)
