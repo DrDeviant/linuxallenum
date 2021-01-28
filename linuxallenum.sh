@@ -848,7 +848,7 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-		echo "digit exec cat ""$RFL"
+			echo "digit exec cat ""$RFL"
 			tclsh8.5
 		fi
 	;;
