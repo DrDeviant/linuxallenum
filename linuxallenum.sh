@@ -916,5 +916,5 @@ while true; do
 		echo "error, invalid choice"
 	;;
 	esac
-	echo "Press ENTER to continue..."
+	read -p "Press ENTER to continue..."
 done
