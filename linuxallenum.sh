@@ -645,21 +645,21 @@ while true; do
 		chmod +x root4
 		./root4
 		whoami
-	;; 
+	;;
 	"162")
 		Scarica "TryCatchHCF/PacketWhisper/cloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/cloakify.py" "cloakify.py"
 		Scarica "TryCatchHCF/PacketWhisper/decloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/decloakify.py" "decloakify.py"
 		Scarica "TryCatchHCF/PacketWhisper/packetWhisper" "$ENTRAW""TryCatchHCF/PacketWhisper/master/packetWhisper.py" "packetWhisper.py"
-	;; 
+	;;
 	"163")
 		Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_amd64.gz" "chisel_1.7.4_linux_amd64.gz"
-	;; 
+	;;
 	"164")
 		Scarica "jpillora/chisel_1.7.4_linux_386" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_386.gz" "chisel_1.7.4_linux_386.gz"
-	;; 
+	;;
 	"165")
 		Scarica "pahaz/sshtunnel" "$ENTSSL""pahaz/sshtunnel/archive/master.zip" "sshtunnel.zip"
-	;; 
+	;;
 	"166")
 		Scarica "KuroLabs/stegcloak" "$ENTSSL""KuroLabs/stegcloak/archive/master.zip" "stegcloak.zip"
 	;;
