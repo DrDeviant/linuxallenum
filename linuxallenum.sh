@@ -773,7 +773,7 @@ while true; do
 		if [[ "$CMD" != "" ]];
 		then
 			echo "Copy and paste this command to escalate privs"
-			echo "sudoedit -s '\' `""$CMD""`"
+			echo "sudoedit -s '\' \`""$CMD""\`"
 		fi
 	;;
 	"183")
