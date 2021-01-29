@@ -89,6 +89,8 @@ while true; do
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
+	echo "RAT"
+	echo -ne " 206. BenChaliah/Arbitrium-RAT\n"
 	echo "REVSHELL"
 	echo -ne " 155. shahril96/socat-reverse-shell\t\t\t156. Doctor-love/revshell\n"
 	echo "SCANNING"
@@ -911,6 +913,9 @@ while true; do
 		then
 			$PYT -c 'import os; os.setuid(0); os.system(\"/bin/bash\")'
 		fi
+	;;
+	"206")
+		Scarica "BenChaliah/Arbitrium-RAT" "$ENTSSL""BenChaliah/Arbitrium-RAT/archive/main.zip" "Arbitrium-RAT.zip"
 	;;
 	*)
 		echo "error, invalid choice"
