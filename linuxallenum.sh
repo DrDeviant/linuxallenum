@@ -695,7 +695,7 @@ while true; do
 		echo 'stats items' | nc localhost 11211 | grep -oe ':[0-9]*:' | grep -oe '[0-9]*' | sort | uniq | xargs -L1 -I{} bash -c 'echo "stats cachedump {} 1000" | nc localhost 11211'
 	;;
 	"170")
-		Scarica "bettercap/bettercap" "$ENTSSL""bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip" "bettercap_amd64_v2.28.zip"
+		Scarica "bettercap/bettercap" "$ENTSSL""bettercap/bettercap/releases/download/v2.29/bettercap_linux_amd64_v2.29.zip" "bettercap_amd64_v2.29.zip"
 	;;
 	"171")
 		mkdir /tmp/cgrp && mount -t cgroup -o rdma cgroup /tmp/cgrp && mkdir /tmp/cgrp/xecho 1 > /tmp/cgrp/x/notify_on_release
