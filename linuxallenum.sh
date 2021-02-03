@@ -167,10 +167,11 @@ while true; do
 		then
 			OFFSEC="offensive-security/exploitdb/"
 			MEX="master/exploits/"
-			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux/local/"
-			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux/local/"
-			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux/local" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			TIPO="linux/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
@@ -186,10 +187,11 @@ while true; do
 		then
 			OFFSEC="offensive-security/exploitdb/"
 			MEX="master/exploits/"
-			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86-64/local/"
-			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86-64/local/"
-			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86-64/local" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			TIPO="linux_x86-64/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
@@ -205,10 +207,11 @@ while true; do
 		then
 			OFFSEC="offensive-security/exploitdb/"
 			MEX="master/exploits/"
-			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""linux_x86/local/"
-			ENTTO="$ENTRAW""$OFFSEC""$MEX""linux_x86/local/"
-			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""linux_x86/local" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			TIPO="linux_x86/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
@@ -224,10 +227,11 @@ while true; do
 		then
 			OFFSEC="offensive-security/exploitdb/"
 			MEX="master/exploits/"
-			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""unix/local/"
-			ENTTO="$ENTRAW""$OFFSEC""$MEX""unix/local/"
-			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""unix/local"
-			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""unix/local" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			TIPO="unix/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
 			do
 				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
 				break
