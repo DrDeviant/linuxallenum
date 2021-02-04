@@ -37,7 +37,6 @@ function Scarica
 	else
 		echo "ERROR: download failed"
 	fi
-	read -p "Press enter to continue"
 }
 
 echo "linuxallenum, by FabioDefilippoSoftware"
