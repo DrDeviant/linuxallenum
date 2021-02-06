@@ -58,7 +58,8 @@ while true; do
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
 	echo -ne " 50. vocytopialatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t\t158. mikeborghi/pywallet\n"
-	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t180. hasanbulat/tshark/dumpcap (amd64)\n"
+	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t180. hasanbulat/tshark/dumpcap (amd64)\t\t\t207. moonD4rk/HackBrowserData-32bit\n"
+	echo -ne " 208. moonD4rk/HackBrowserData-64bit\n"
 	echo "ENUMERATION"
 	echo -ne " 1. rebootuser/LinEnum\t\t\t\t\t134. jtpereyda/enum4linux\t\t\t2. Arr0way/linux-local-enumeration-script\n"
 	echo -ne " 3. sleventyeleven/linuxprivchecker\t\t\t4. jondonas/linux-exploit-suggester-2\t\t5. TheSecondSun/Bashark\n"
@@ -939,6 +940,12 @@ while true; do
 	;;
 	"206")
 		Scarica "BenChaliah/Arbitrium-RAT" "$ENTSSL""BenChaliah/Arbitrium-RAT/archive/main.zip" "Arbitrium-RAT.zip"
+	;;
+	"207")
+		Scarica "moonD4rk/HackBrowserData-32bit" "$ENTSSL""moonD4rk/HackBrowserData/releases/download/v0.3.3/hack-browser-data-v0.3.3-linux-32bit.zip" "hack-browser-data-v0.3.3-linux-32bit.zip"
+	;;
+	"208")
+		Scarica "moonD4rk/HackBrowserData-64bit" "$ENTSSL""moonD4rk/HackBrowserData/releases/download/v0.3.3/hack-browser-data-v0.3.3-linux-64bit.zip" "hack-browser-data-v0.3.3-linux-64bit.zip"
 	;;
 	*)
 		echo "error, invalid choice"
