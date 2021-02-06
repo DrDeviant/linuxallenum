@@ -97,6 +97,8 @@ while true; do
 	echo "SCANNING"
 	echo -ne " 114. porterhau5/bash-port-scanner/scanner\t\t115. davidmerrick/Python-Port-Scanner/master/port_scanner\n"
 	echo -ne " 151. vulmon/Vulmap/Vulmap-Linux\n"
+	echo "SMB"
+	echo -ne " 209. deepsecurity-pe/GoGhost\n"
 	echo "TUNNELING"
 	echo -ne " 21. T3rry7f/ICMPTunnel/IcmpTunnel_C\t\t\t133. blackarrowsec/mssqlproxy/mssqlclient\n"
 	echo -ne " 137. sensepost/DNS-Shell\t\t\t\t163. jpillora/chisel_1.7.2_linux_amd64\t\t\t\t164. jpillora/chisel_1.7.2_linux_386\n"
@@ -946,6 +948,9 @@ while true; do
 	;;
 	"208")
 		Scarica "moonD4rk/HackBrowserData-64bit" "$ENTSSL""moonD4rk/HackBrowserData/releases/download/v0.3.3/hack-browser-data-v0.3.3-linux-64bit.zip" "hack-browser-data-v0.3.3-linux-64bit.zip"
+	;;
+	"209")
+		Scarica "deepsecurity-pe/GoGhost" "$ENTSSL""deepsecurity-pe/GoGhost/raw/master/GoGhost_linux_amd64" "GoGhost_linux_amd64"
 	;;
 	*)
 		echo "error, invalid choice"
