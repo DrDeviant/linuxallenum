@@ -960,13 +960,13 @@ while true; do
 		then
 			echo "Digit the encrypted file name to create before decrypt it"
 			read -p "(example, payload.enc): " ENFL
-			if [[ "$BFL" != "" ]];
+			if [[ "$ENFL" != "" ]];
 			then
 				echo "Digit the password to decrypt the file"
 				read -p "Password: " PSSWD
 				if [[ "$PSSWD" != "" ]];
 				then
-					base64 -d "$ENFL" > "$ENFL"
+					base64 -d "$BFL" > "$ENFL"
 					echo "Do you want pipe to bash or save it in a file?"
 					read -p "Do you want save it (Y/n)? " RSP
 					if [[ "$RSP" == "Y" ]];
