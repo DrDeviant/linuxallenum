@@ -127,6 +127,7 @@ while true; do
 	echo -ne " 197. PrivEsc with find and awk\t198. PrivEsc with less\t199. PrivEsc with more\n"
 	echo -ne " 200. list all bins with perm 400 root\t201. PrivEsc with nano\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t204. get capabilities\t205. PrivEsc with python\n"
+	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -951,6 +952,32 @@ while true; do
 	;;
 	"209")
 		Scarica "deepsecurity-pe/GoGhost" "$ENTSSL""deepsecurity-pe/GoGhost/raw/master/GoGhost_linux_amd64" "GoGhost_linux_amd64"
+	;;
+	"210")
+		echo "Paste the base64 encrypted file"
+		read -p "paste now" BFL
+		if [[ "$BFL" != "" ]];
+		then
+			echo "Digit the encrypted file name to create before decrypt it"
+			read -p "(example, payload.enc): " ENFL
+			if [[ "$BFL" != "" ]];
+			then
+				echo "Digit the password to decrypt the file"
+				read -p "Password: " PSSWD
+				if [[ "$PSSWD" != "" ]];
+				then
+					base64 -d "$ENFL" > "$ENFL"
+					echo "Do you want pipe to bash or save it in a file?"
+					read -p "Do you want save it (Y/n)? " RSP
+					if [[ "$RSP" == "Y" ]];
+					then
+						unzip -P "$PSSWD" "$ENFL"
+					else
+						unzip -c -P "$PSSWD" "$ENFL" | bash
+					fi
+				fi
+			fi
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
