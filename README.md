@@ -4,7 +4,7 @@ this bash script is for remote linux hosts hacked!
 ## Note:
 these scripts will change critically hacked host!
 
-Over 100 tools and utilities:
+Over 200 tools and utilities:
 - delete logs;
 - local privesc;
 - local exploits;
