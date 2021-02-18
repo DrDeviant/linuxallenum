@@ -91,7 +91,7 @@ while true; do
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
 	echo "PROXY - REVPROXY"
-	echo -ne " 211. fatedier/frp_x86\n"
+	echo -ne " 211. fatedier/frp_386\t\t\t\t212. fatedier/frp_amd64\n"
 	echo "RAT"
 	echo -ne " 206. BenChaliah/Arbitrium-RAT\n"
 	echo "REVSHELL"
@@ -982,7 +982,10 @@ while true; do
 		fi
 	;;
 	"211")
-		Scarica "fatedier/frp" "$ENTSSL""fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_386.tar.gz" "frp_0.35.1_linux_386.tar.gz"
+		Scarica "fatedier/frp_386" "$ENTSSL""fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_386.tar.gz" "frp_0.35.1_linux_386.tar.gz"
+	;;
+	"212")
+		Scarica "fatedier/frp_amd64" "$ENTSSL""fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz" "frp_0.35.1_linux_amd64.tar.gz"
 	;;
 	*)
 		echo "error, invalid choice"
