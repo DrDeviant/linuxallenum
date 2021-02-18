@@ -90,6 +90,8 @@ while true; do
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
+	echo "PROXY - REVPROXY"
+	echo -ne " 211. fatedier/frp_x86\n"
 	echo "RAT"
 	echo -ne " 206. BenChaliah/Arbitrium-RAT\n"
 	echo "REVSHELL"
@@ -978,6 +980,9 @@ while true; do
 				fi
 			fi
 		fi
+	;;
+	"211")
+		Scarica "fatedier/frp" "$ENTSSL""fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_386.tar.gz" "frp_0.35.1_linux_386.tar.gz"
 	;;
 	*)
 		echo "error, invalid choice"
