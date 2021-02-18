@@ -60,7 +60,7 @@ while true; do
 	else
 		HGSC="Evasion/Bypass=Disabled"
 	fi
-	echo "$HGSC"
+	echo -ne "\n""$HGSC""\n"
 	echo -ne "0. exit\t\t\t\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n"
 	echo "ACTIVE DIRECTORY"
 	echo -ne " 20. skelsec/jackdaw\t\t\t\t\t139. DanMcInerney/icebreaker\n"
