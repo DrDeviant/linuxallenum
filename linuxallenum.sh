@@ -16,6 +16,7 @@ then
 	WGET="1"
 fi
 
+HGSC="Evasion/Bypass=Disabled"
 ENTSSL="https://github.com/"
 ENTRAW="https://raw.githubusercontent.com/"
 GSTRAW="https://gist.githubusercontent.com/"
@@ -53,7 +54,14 @@ function Scarica
 echo "linuxallenum, by FabioDefilippoSoftware"
 
 while true; do
-	echo "0. exit"
+	if [[ "$HGSC" == "1" ]];
+	then
+		HGSC="Evasion/Bypass=Enabled"
+	else
+		HGSC="Evasion/Bypass=Disabled"
+	fi
+	echo "$HGSC"
+	echo -ne "0. exit\t\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n"
 	echo "ACTIVE DIRECTORY"
 	echo -ne " 20. skelsec/jackdaw\t\t\t\t\t139. DanMcInerney/icebreaker\n"
 	echo "ANTIFORENSICS - STEGANOGRAPHY"
@@ -142,7 +150,7 @@ while true; do
 	echo -ne " 197. PrivEsc with find and awk\t198. PrivEsc with less\t199. PrivEsc with more\n"
 	echo -ne " 200. list all bins with perm 400 root\t201. PrivEsc with nano\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t204. get capabilities\t205. PrivEsc with python\n"
-	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n"
+	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
