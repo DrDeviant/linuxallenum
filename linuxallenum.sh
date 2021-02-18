@@ -105,7 +105,7 @@ while true; do
 	echo "TUNNELING"
 	echo -ne " 21. T3rry7f/ICMPTunnel/IcmpTunnel_C\t\t\t133. blackarrowsec/mssqlproxy/mssqlclient\n"
 	echo -ne " 137. sensepost/DNS-Shell\t\t\t\t163. jpillora/chisel_1.7.2_linux_amd64\t\t\t\t164. jpillora/chisel_1.7.2_linux_386\n"
-	echo -ne " 165. pahaz/sshtunnel\t\t\t\t\t215. jpillora/chisel_arm64\n"
+	echo -ne " 165. pahaz/sshtunnel\t\t\t\t\t215. jpillora/chisel_arm64\t\t\t\t216. jpillora/chisel_armv7\n"
 	echo "UPNP"
 	echo -ne " 130. tenable/upnp_info\n"
 	echo "UTILITIES"
@@ -996,6 +996,9 @@ while true; do
 	;;
 	"215")
 		Scarica "jpillora/chisel_arm64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_arm64.gz" "chisel_1.7.4_linux_arm64.gz"
+	;;
+	"216")
+		Scarica "jpillora/chisel_armv7" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_armv7.gz" "chisel_1.7.4_linux_armv7.gz"
 	;;
 	*)
 		echo "error, invalid choice"
