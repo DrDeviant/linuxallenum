@@ -86,7 +86,7 @@ while true; do
 	echo -ne " 8. carlospolop/privilege-escalation-awesome-scripts-suite/linPEAS\n"
 	echo -ne " 9. InteliSecureLabs/Linux_Exploit_Suggester/Linux_Exploit_Suggester\n"
 	echo -ne " 138. diego-treitos/linux-smart-enumeration/lse\t\t159. DominicBreuker/pspy64s\t\t\t160. DominicBreuker/pspy32s\n"
-	echo -ne " 181. dylanaraps/neofetch\n"
+	echo -ne " 181. dylanaraps/neofetch\t\t\t\t34. pentestmonkey/unix-privesc-check\n"
 	echo "EVASION"
 	echo -ne " 22. cytopia/pwncat\n"
 	echo "EXPLOIT"
@@ -95,6 +95,8 @@ while true; do
 	echo " 12. github - offensive-security/exploitdb - exploits/linux_x86/local"
 	echo " 13. github - offensive-security/exploitdb - exploits/unix/local"
 	echo " 14. github - offensive-security/exploitdb - exploits/macos/local"
+	echo " 15. github - offensive-security/exploitdb - exploits/freebsd/local"
+	echo " 16. github - offensive-security/exploitdb - exploits/freebsdx86-64/local"
 	echo -ne " 167. exploit-db all exploits\n"
 	echo "GATHERING"
 	echo -ne " 157. HightechSec/git-scanner/gitscanner\n"
@@ -289,6 +291,46 @@ while true; do
 			Scarica "offensive-security/exploitdb/exploits/macos/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/macos/local/""$FILE" "$FILE"
 		fi
 	;;
+	"15")
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			TIPO="freebsd/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/freebsd/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "offensive-security/exploitdb/exploits/freebsd/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/freebsd/local/""$FILE" "$FILE"
+		fi
+	;;
+	"16")
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			TIPO="freebsdx86-64/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/freebsdx86-64/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "offensive-security/exploitdb/exploits/freebsdx86-64/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/freebsdx86-64/local/""$FILE" "$FILE"
+		fi
+	;;
 	"20")
 		Scarica "skelsec/jackdaw/" "$ENTSSL""skelsec/jackdaw/archive/master.zip" "jackdaw.zip"
 	;;
@@ -360,6 +402,9 @@ while true; do
 	;;
 	"33")
 		Scarica "m57/dnsteal" "$ENTRAW""m57/dnsteal/master/dnsteal.py" "dnsteal.py"
+	;;
+	"34")
+		Scarica "pentestmonkey/unix-privesc-check" "$ENTSSL""pentestmonkey/unix-privesc-check/archive/master.zip" "unix-privesc-check.zip"
 	;;
 	"40")
 		Scarica "dinigalab/ldapsearch" "$ENTRAW""dinigalab/ldapsearch/master/ldapsearch.py" "ldapsearch.py"
