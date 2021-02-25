@@ -93,7 +93,7 @@ while true; do
 	echo " 10. github - offensive-security/exploitdb - exploits/linux/local"
 	echo " 11. github - offensive-security/exploitdb - exploits/linux_x86-64/local"
 	echo " 12. github - offensive-security/exploitdb - exploits/linux_x86/local"
-	echo " 13. https://github.com/offensive-security/exploitdb - exploits/unix/local"
+	echo " 13. github - offensive-security/exploitdb - exploits/unix/local"
 	echo -ne " 167. exploit-db all exploits\n"
 	echo "GATHERING"
 	echo -ne " 157. HightechSec/git-scanner/gitscanner\n"
