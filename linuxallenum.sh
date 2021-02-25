@@ -49,9 +49,9 @@ function Scarica
 	then
 		if [[ "$SEC" == "1" ]];
 		then
-			$FETCP "$2" | bash
+			$FETCP --no-verify-peer "$2" | bash
 		else
-			$FETCP -o "$3" "$2"
+			$FETCP --no-verify-peer -o "$3" "$2"
 		fi
 	fi
 	if [[ -f ./$3 ]];
