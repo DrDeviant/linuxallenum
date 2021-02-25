@@ -94,6 +94,7 @@ while true; do
 	echo " 11. github - offensive-security/exploitdb - exploits/linux_x86-64/local"
 	echo " 12. github - offensive-security/exploitdb - exploits/linux_x86/local"
 	echo " 13. github - offensive-security/exploitdb - exploits/unix/local"
+	echo " 14. github - offensive-security/exploitdb - exploits/macos/local"
 	echo -ne " 167. exploit-db all exploits\n"
 	echo "GATHERING"
 	echo -ne " 157. HightechSec/git-scanner/gitscanner\n"
@@ -265,7 +266,27 @@ while true; do
 		else
 			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/unix/local with extension"
 			read -p "(example exploit.py): " FILE
-			Scarica "offensive-security/exploitdb/exploits/linux/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/unix/local/""$FILE" "$FILE"
+			Scarica "offensive-security/exploitdb/exploits/unix/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/unix/local/""$FILE" "$FILE"
+		fi
+	;;
+	"14")
+		if [[ -f $(which lynx) ]];
+		then
+			OFFSEC="offensive-security/exploitdb/"
+			MEX="master/exploits/"
+			TIPO="macos/local"
+			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
+			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
+			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
+			select EXP in $(lynx -dump -listonly "$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO" | grep "$ENTFRM" | awk '{print $2}' | while read -r EXP; do echo "${EXP/$ENTFRM/}"; done)
+			do
+				Scarica "$OFFSEC""$EXP" "$ENTTO""$EXP" "$EXP"
+				break
+			done
+		else
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/macos/local with extension"
+			read -p "(example exploit.py): " FILE
+			Scarica "offensive-security/exploitdb/exploits/macos/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/macos/local/""$FILE" "$FILE"
 		fi
 	;;
 	"20")
