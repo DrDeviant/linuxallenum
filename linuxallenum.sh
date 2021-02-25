@@ -49,7 +49,7 @@ function Scarica
 	then
 		if [[ "$SEC" == "1" ]];
 		then
-			$FETCP --no-verify-peer "$2" | bash
+			$FETCP --no-verify-peer "$2" -o - | bash
 		else
 			$FETCP --no-verify-peer -o "$3" "$2"
 		fi
