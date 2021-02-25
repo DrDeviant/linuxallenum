@@ -96,7 +96,7 @@ while true; do
 	echo " 13. github - offensive-security/exploitdb - exploits/unix/local"
 	echo " 14. github - offensive-security/exploitdb - exploits/macos/local"
 	echo " 15. github - offensive-security/exploitdb - exploits/freebsd/local"
-	echo " 16. github - offensive-security/exploitdb - exploits/freebsdx86-64/local"
+	echo " 16. github - offensive-security/exploitdb - exploits/freebsd_x86-64/local"
 	echo -ne " 167. exploit-db all exploits\n"
 	echo "GATHERING"
 	echo -ne " 157. HightechSec/git-scanner/gitscanner\n"
@@ -316,7 +316,7 @@ while true; do
 		then
 			OFFSEC="offensive-security/exploitdb/"
 			MEX="master/exploits/"
-			TIPO="freebsdx86-64/local"
+			TIPO="freebsd_x86-64/local"
 			ENTFRM="$ENTSSL""$OFFSEC""blob/""$MEX""$TIPO""/"
 			ENTTO="$ENTRAW""$OFFSEC""$MEX""$TIPO""/"
 			echo "Select a file name from ""$ENTSSL""$OFFSEC""tree/""$MEX""$TIPO"
@@ -326,9 +326,9 @@ while true; do
 				break
 			done
 		else
-			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/freebsdx86-64/local with extension"
+			echo "Digit a file name from https://github.com/offensive-security/exploitdb/tree/master/exploits/freebsd_x86-64/local with extension"
 			read -p "(example exploit.py): " FILE
-			Scarica "offensive-security/exploitdb/exploits/freebsdx86-64/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/freebsdx86-64/local/""$FILE" "$FILE"
+			Scarica "offensive-security/exploitdb/exploits/freebsd_x86-64/local/""$FILE" "$ENTRAW""offensive-security/exploitdb/master/exploits/freebsd_x86-64/local/""$FILE" "$FILE"
 		fi
 	;;
 	"20")
