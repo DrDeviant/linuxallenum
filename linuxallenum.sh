@@ -7,6 +7,7 @@ WGET="2"
 SEC="0"
 WGETP=$(which wget)
 CURLP=$(which curl)
+FETCP=$(which fetch)
 
 if [[ -f "$WGETP" ]];
 then
@@ -14,6 +15,9 @@ then
 elif [[ -f "$CURLP" ]];
 then
 	WGET="1"
+elif [[ -f "$FETCP" ]];
+then
+	WGET="2"
 fi
 
 HGSC="Evasion/Bypass=Disabled"
@@ -37,9 +41,17 @@ function Scarica
 	then
 		if [[ "$SEC" == "1" ]];
 		then
-			$CURLP -k -L | bash
+			$CURLP -k -L "$2" | bash
 		else
 			$CURLP -k -L -o "$3" "$2"
+		fi
+	elif [[ "$WGET" == "2" ]];
+	then
+		if [[ "$SEC" == "1" ]];
+		then
+			$FETCP "$2" | bash
+		else
+			$FETCP -o "$3" "$2"
 		fi
 	fi
 	if [[ -f ./$3 ]];
