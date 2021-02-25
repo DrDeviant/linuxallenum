@@ -123,7 +123,7 @@ while true; do
 	echo "MITM - SNIFFING"
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
-	echo -ne " 154. TH3xACE/SUDO_KILLER\n"
+	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\n"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
 	echo -ne " 214. fatedier/frp_arm64\n"
@@ -563,6 +563,9 @@ while true; do
 	;;
 	"108")
 		sudo -u root vim -c '!sh'
+	;;
+	"109")
+		Scarica "nongiach/sudo_inject" "$ENTSSL""nongiach/sudo_inject/archive/master.zip" "sudo_inject.zip"
 	;;
 	"110")
 		read -p "Paste escaped hex values" HEXD
