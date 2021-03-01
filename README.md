@@ -13,7 +13,10 @@ Over 200 tools and utilities:
 - hack protocols and containers;
 - tunnelling;
 - evasion;
+- compatibility with MacOS;
 
 and much more...
 
 Please, share and starring my repos, follow me and... Happy hacking!
+
+Twitter: @fabio_defilippo
