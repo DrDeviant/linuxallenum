@@ -23,4 +23,4 @@ and much more...
 
 Please, share and starring my repos, follow me and... Happy hacking!
 
-[![Twitter URL]<href="https://twitter.com/fabio_defilippo">@fabio_defilippo</href>
+[![Twitter URL]<a href="https://twitter.com/fabio_defilippo">@fabio_defilippo</a>
