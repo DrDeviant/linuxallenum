@@ -1,5 +1,9 @@
 # linuxallenum
-this bash script is for remote linux hosts hacked!
+this bash script is for remote linux, unix and macos hosts hacked!
+
+## Warning:
+1. this script will download other tools; be careful!
+2. if you want hack an host, before use linuxallremote from my repositories!
 
 ## Note:
 these scripts will change critically hacked host!
