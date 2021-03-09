@@ -1131,11 +1131,16 @@ while true; do
 			read -p "(example, 8000): " LPORT
 			if [[ "$LPORT" != "" ]];
 			then
-				echo "Digit the localhost's port"
-				read -p "(example, 1337): " PORT
-				if [[ "$PORT" != "" ]];
+				echo "Digit an IP to redirect its connection"
+				read -p "(example, 192.168.0.3 or localhost): " IP
+				if [[ "$IP" != "" ]];
 				then
-					ssh -L "$LPORT"":127.0.0.1:""$PORT" $(whoami)@127.0.0.1
+					echo "Digit the localhost's port"
+					read -p "(example, 1337): " PORT
+					if [[ "$PORT" != "" ]];
+					then
+						ssh -L "$LPORT"":""$IP"":""$PORT"
+					fi
 				fi
 			fi
 	;;
