@@ -151,7 +151,7 @@ while true; do
 	echo -ne " 136. Capture All packets from loopback\n"
 	echo -ne " 24. PrivEsc with wget to send a file\t\t\t25. PrivEsc with zip\t\t\t\t26. PrivEsc with perl\n"
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
-	echo -ne " 142. clear IP from logs\t\t\t\t143. socat port forward\t\t\t\t144. sudo -l\n"
+	echo -ne " 142. clear IP from logs\t\t\t\t143. SOCAT Port Forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
 	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t\t\t169. dump keys from memcached\n"
@@ -166,7 +166,7 @@ while true; do
 	echo -ne " 200. list all bins with perm 400 root\t\t\t201. PrivEsc with nano\t\t\t\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t\t\t\t204. get capabilities\t\t\t\t205. PrivEsc with python\n"
 	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t107. PrivEsc with vim method 1\n"
-	echo -ne " 108. PrivEsc with vim method 2\t\t\t\t219. Enum with sysdiagnose\n"
+	echo -ne " 108. PrivEsc with vim method 2\t\t\t\t219. Enum with sysdiagnose\t\t\t\t220. SSH Port Forward\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1125,6 +1125,24 @@ while true; do
 	;;
 	"219")
 		sysdiagnose -f ./
+	;;
+	"220")
+			echo "Digit a listen port"
+			read -p "(example, 8000): " LPORT
+			if [[ "$LPORT" != "" ]];
+			then
+				echo "Digit an IP to redirect its connection"
+				read -p "(example, 192.168.0.3 or 127.0.0.1): " IP
+				if [[ "$IP" != "" ]];
+				then
+					echo "Digit the ""$IP""'s port"
+					read -p "(example, 1337): " PORT
+					if [[ "$PORT" != "" ]];
+					then
+						ssh -L "$LPORT"":""$IP"":"$PORT"
+					fi
+				fi
+			fi
 	;;
 	*)
 		echo "error, invalid choice"
