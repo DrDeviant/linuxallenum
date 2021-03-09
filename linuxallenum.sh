@@ -1139,7 +1139,7 @@ while true; do
 					read -p "(example, 1337): " PORT
 					if [[ "$PORT" != "" ]];
 					then
-						ssh -L "$LPORT"":""$IP"":"$PORT"
+						ssh -L "$LPORT"":""$IP"":""$PORT"
 					fi
 				fi
 			fi
