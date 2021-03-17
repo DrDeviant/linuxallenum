@@ -120,6 +120,8 @@ while true; do
 	echo -ne " 40. dinigalab/ldapsearch\n"
 	echo "MISC"
 	echo -ne " 41. SecureAuthCorp/impacket\n"
+	echo -ne " 221. andrew-d/static-binaries/linux/x86_64\t\t222. andrew-d/static-binaries/linux/x86\n"
+	echo -ne " 223. andrew-d/static-binaries/linux/arm\n"
 	echo "MITM - SNIFFING"
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
