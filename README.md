@@ -24,3 +24,5 @@ and much more...
 Please, share and starring my repos, follow me and... Happy hacking!
 
 Twitter:<a href="https://twitter.com/fabio_defilippo">@fabio_defilippo</a>
+
+Donate: https://www.paypal.com/donate?hosted_button_id=559D4CJB84KQJ
