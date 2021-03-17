@@ -1144,6 +1144,33 @@ while true; do
 				fi
 			fi
 	;;
+	"221")
+		echo "Navigate to ""$ENTSSL""andrew-d/static-binaries/tree/master/binaries/linux/x86_64"
+		echo "Digit a binary to download"
+		read -p "(example, socat): " BFL
+		if [[ "$BFL" != "" ]];
+		then
+			Scarica "andrew-d/static-binaries/linux/x86_64/""$BFL" "$ENTSSL""andrew-d/static-binaries/raw/master/binaries/linux/x86_64/""$BFL" "$BFL"
+		fi
+	;;
+	"222")
+		echo "Navigate to ""$ENTSSL""andrew-d/static-binaries/tree/master/binaries/linux/x86"
+		echo "Digit a binary to download"
+		read -p "(example, socat): " BFL
+		if [[ "$BFL" != "" ]];
+		then
+			Scarica "andrew-d/static-binaries/linux/x86/""$BFL" "$ENTSSL""andrew-d/static-binaries/raw/master/binaries/linux/x86/""$BFL" "$BFL"
+		fi
+	;;
+	"223")
+		echo "Navigate to ""$ENTSSL""andrew-d/static-binaries/tree/master/binaries/linux/arm"
+		echo "Digit a binary to download"
+		read -p "(example, socat): " BFL
+		if [[ "$BFL" != "" ]];
+		then
+			Scarica "andrew-d/static-binaries/linux/arm/""$BFL" "$ENTSSL""andrew-d/static-binaries/raw/master/binaries/linux/arm/""$BFL" "$BFL"
+		fi
+	;;
 	*)
 		echo "error, invalid choice"
 	;;
