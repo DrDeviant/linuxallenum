@@ -126,6 +126,7 @@ while true; do
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\n"
+	echo -ne " 224. swisskyrepo/PayloadsAllTheThings/Mathodology_and_Resources/Linux-PrivilegeEscalation\n"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
 	echo -ne " 214. fatedier/frp_arm64\n"
@@ -1172,6 +1173,9 @@ while true; do
 		then
 			Scarica "andrew-d/static-binaries/linux/arm/""$BFL" "$ENTSSL""andrew-d/static-binaries/raw/master/binaries/linux/arm/""$BFL" "$BFL"
 		fi
+	;;
+	"224")
+		Scarica "swisskyrepo/PayloadsAllTheThings/Methodology_and_Resources/Linux-PrivilegeEscalation" "Linux-PrivilegeEscalation.md" "swisskyrepo/PayloadsAllTheThings/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md"
 	;;
 	*)
 		echo "error, invalid choice"
