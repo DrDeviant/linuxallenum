@@ -1175,7 +1175,7 @@ while true; do
 		fi
 	;;
 	"224")
-		Scarica "swisskyrepo/PayloadsAllTheThings/Methodology_and_Resources/Linux-PrivilegeEscalation" "Linux-PrivilegeEscalation.md" "swisskyrepo/PayloadsAllTheThings/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md"
+		Scarica "swisskyrepo/PayloadsAllTheThings/Methodology_and_Resources/Linux-PrivilegeEscalation" "$ENTRAW""swisskyrepo/PayloadsAllTheThings/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md" "Linux-PrivilegeEscalation.md"
 	;;
 	*)
 		echo "error, invalid choice"
