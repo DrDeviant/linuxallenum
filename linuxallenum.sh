@@ -156,7 +156,7 @@ while true; do
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. SOCAT Port Forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
-	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t\t\n"
+	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t\t225. Fix limited PATH env\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t\t\t169. dump keys from memcached\n"
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t\t\t178. analyze an executable file with strace and ltrace\n"
@@ -1176,6 +1176,9 @@ while true; do
 	;;
 	"224")
 		Scarica "swisskyrepo/PayloadsAllTheThings/Methodology_and_Resources/Linux-PrivilegeEscalation" "$ENTRAW""swisskyrepo/PayloadsAllTheThings/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md" "Linux-PrivilegeEscalation.md"
+	;;
+	"225")
+		PATH="$PATH"":/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 	;;
 	*)
 		echo "error, invalid choice"
