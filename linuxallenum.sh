@@ -33,9 +33,9 @@ function Scarica
 	then
 		if [[ "$SEC" == "1" ]];
 		then
-			$WGETP -O - --no-check-certificate "$2" | bash
+			$WGETP -q -O - --no-check-certificate "$2" | bash
 		else
-			$WGETP --no-check-certificate "$2" -O "$3"
+			$WGETP -q --no-check-certificate "$2" -O "$3"
 		fi
 	elif [[ "$WGET" == "1" ]];
 	then
