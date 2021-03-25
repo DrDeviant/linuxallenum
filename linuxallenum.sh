@@ -41,9 +41,9 @@ function Scarica
 	then
 		if [[ "$SEC" == "1" ]];
 		then
-			$CURLP -k -L "$2" | bash
+			$CURLP -s -k -L "$2" | bash
 		else
-			$CURLP -k -L -o "$3" "$2"
+			$CURLP -s -k -L -o "$3" "$2"
 		fi
 	elif [[ "$WGET" == "2" ]];
 	then
