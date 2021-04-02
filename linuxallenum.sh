@@ -1180,6 +1180,12 @@ while true; do
 	"225")
 		PATH="$PATH"":/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 	;;
+	"226")
+		Scarica "sleventyeleven/linuxprivchecker" "$ENTRAW""sleventyeleven/linuxprivchecker/master/linuxprivchecker.py" "linuxprivchecker.py"
+	;;
+	"227")
+		Scarica "TH3xACE/SUDO_KILLER" "$ENTSSL""TH3xACE/SUDO_KILLER/archive/refs/heads/master.zip" "SUDO_KILLER.zip"
+	;;
 	*)
 		echo "error, invalid choice"
 	;;
