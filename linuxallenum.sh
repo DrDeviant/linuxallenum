@@ -1127,7 +1127,12 @@ while true; do
 		fi
 	;;
 	"219")
-		sysdiagnose -f ./
+		if [[ -f $(which sysdiagnose) ]];
+		then
+			sysdiagnose -f ./
+		else
+			echo "sysdiagnose not installed"
+		fi
 	;;
 	"220")
 			echo "Digit a listen port"
