@@ -171,6 +171,7 @@ while true; do
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t\t\t\t204. get capabilities\t\t\t\t205. PrivEsc with python\n"
 	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t107. PrivEsc with vim method 1\n"
 	echo -ne " 108. PrivEsc with vim method 2\t\t\t\t219. Enum with sysdiagnose\t\t\t\t220. SSH Port Forward\n"
+	echo -ne " 229. insert current path in PATH var\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1194,6 +1195,9 @@ while true; do
 	;;
 	"228")
 		Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
+	;;
+	"229")
+		export PATH=$(pwd):$PATH
 	;;
 	*)
 		echo "error, invalid choice"
