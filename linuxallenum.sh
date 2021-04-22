@@ -864,7 +864,12 @@ while true; do
 		fi
 	;;
 	"173")
-		Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
+		if [[ -f ./deepce.sh ]];
+		then
+			./deepce.sh
+		else
+			Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
+		fi
 	;;
 	"174")
 		echo "Digit a tar.gz file full path to extract"
