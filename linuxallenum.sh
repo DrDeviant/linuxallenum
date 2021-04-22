@@ -856,7 +856,12 @@ while true; do
 		chmod a+x /cmdsh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"
 	;;
 	"172")
-		Scarica "Keramas/Blowhole" "$ENTRAW""Keramas/Blowhole/master/blowhole.py" "blowhole.py"
+		if [[ -f ./blowhole.py ]];
+		then
+			python blowhole.py -i -a -o blowhole.report
+		else
+			Scarica "Keramas/Blowhole" "$ENTRAW""Keramas/Blowhole/master/blowhole.py" "blowhole.py"
+		fi
 	;;
 	"173")
 		Scarica "stealthcopter/deepce" "$ENTRAW""stealthcopter/deepce/master/deepce.sh" "deepce.sh"
