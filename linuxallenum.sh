@@ -419,7 +419,12 @@ while true; do
 		Scarica "TiagoANeves/TDTLinuxPWD" "$ENTRAW""TiagoANeves/TDTLinuxPWD/master/TDTLinuxPWD.py" "TDTLinuxPWD.py"
 	;;
 	"33")
-		Scarica "m57/dnsteal" "$ENTRAW""m57/dnsteal/master/dnsteal.py" "dnsteal.py"
+		if [[ -f ./dnsteal.py ]];
+		then
+			python ./dnsteal.py 127.0.0.1 -z -v
+		else
+			Scarica "m57/dnsteal" "$ENTRAW""m57/dnsteal/master/dnsteal.py" "dnsteal.py"
+		fi
 	;;
 	"34")
 		Scarica "pentestmonkey/unix-privesc-check" "$ENTSSL""pentestmonkey/unix-privesc-check/archive/master.zip" "unix-privesc-check.zip"
