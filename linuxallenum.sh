@@ -637,7 +637,12 @@ while true; do
 		fi
 	;;
 	"130")
-		Scarica "tenable/upnp_info" "$ENTRAW""tenable/upnp_info/master/upnp_info.py" "upnp_info.py"
+		if [[ -f ./upnp_info.py ]];
+		then
+			python ./upnp_info.py
+		else
+			Scarica "tenable/upnp_info" "$ENTRAW""tenable/upnp_info/master/upnp_info.py" "upnp_info.py"
+		fi
 	;;
 	"131")
 		Scarica "mlgualtieri/NTLMRawUnHide" "$ENTRAW""mlgualtieri/NTLMRawUnHide/master/NTLMRawUnHide.py" "NTLMRawUnHide.py"
