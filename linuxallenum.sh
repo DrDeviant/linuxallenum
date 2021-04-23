@@ -1223,7 +1223,12 @@ while true; do
 		export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 	;;
 	"226")
-		Scarica "liamg/traitor-386" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-386" "traitor-386"
+		if [[ -f ./traitor-386 ]];
+		then
+			traitor-386 -a -p
+		else
+			Scarica "liamg/traitor-386" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-386" "traitor-386"
+		fi
 	;;
 	"227")
 		Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
