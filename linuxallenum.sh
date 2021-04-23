@@ -782,7 +782,12 @@ while true; do
 		Scarica "incredigeek/grond" "https://www.incredigeek.com/home/downloads/grond.sh" "grond.sh"
 	;;
 	"154")
-		Scarica "TH3xACE/SUDO_KILLER" "$ENTSSL""TH3xACE/SUDO_KILLER/archive/master.zip" "SUDO_KILLER.zip"
+		if [[ -f ./sudo_killer.sh ]];
+		then
+			./sudo_killer.sh -c
+		else
+			Scarica "TH3xACE/SUDO_KILLER" "$ENTSSL""TH3xACE/SUDO_KILLER/archive/master.zip" "SUDO_KILLER.zip"
+		fi
 	;;
 	"155")
 		Scarica "shahril96/socat-reverse-shell" "$GSTRAW""shahril96/c2d9dd7a93901c4876c7be1572cccb26/raw/5e96b09fd88e8aed800bd07bbee55f913bc53e95/socat-reverse-shell.sh" "socat-reverse-shell.sh"
