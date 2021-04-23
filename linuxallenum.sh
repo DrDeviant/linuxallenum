@@ -87,7 +87,7 @@ while true; do
 	echo -ne " 172. Keramas/Blowhole\t\t\t\t\t173. stealthcopter/deepce\t\t\t175. nccgroup/go-pillage-registries_1.0_Linux_i386\n"
 	echo -ne " 176. nccgroup/go-pillage-registries_1.0_Linux_x86_64\t\t\t116. sensepost/dwn\n"
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
-	echo -ne " 50. vocytopialatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
+	echo -ne " 50. volatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t158. mikeborghi/pywallet\n"
 	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t\t180. hasanbulat/tshark/dumpcap (amd64)\t\t207. moonD4rk/HackBrowserData-32bit\n"
 	echo -ne " 208. moonD4rk/HackBrowserData-64bit\n"
