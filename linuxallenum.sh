@@ -757,7 +757,12 @@ while true; do
 		less ~/.bash_history
 	;;
 	"149")
-		Scarica "louisabraham/ffpass" "$ENTSSL""louisabraham/ffpass/archive/master.zip" "ffpass.zip"
+		if [[ -f ./ffpass ]];
+		then
+			./ffpass export -f passwords.csv
+		else
+			Scarica "louisabraham/ffpass" "$ENTSSL""louisabraham/ffpass/archive/master.zip" "ffpass.zip"
+		fi
 	;;
 	"150")
 		Scarica "aarsakian/MFTExtractor" "$ENTRAW""aarsakian/MFTExtractor/master/MFTExtractor.go" "MFTExtractor.go"
