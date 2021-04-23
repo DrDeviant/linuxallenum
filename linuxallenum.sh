@@ -127,7 +127,7 @@ while true; do
 	echo "PRIVESC"
 	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\t\t\t\t226. liamg/traitor-386\n"
 	echo -ne " 224. swisskyrepo/PayloadsAllTheThings/Mathodology_and_Resources/Linux-PrivilegeEscalation\n"
-	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\n"
+	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\t\t\t\t230. b3rito/yodo\n"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
 	echo -ne " 214. fatedier/frp_arm64\n"
@@ -1253,6 +1253,14 @@ while true; do
 	;;
 	"229")
 		export PATH=$(pwd):$PATH
+	;;
+	"230")
+		if [[ -f ./yodo.sh ]];
+		then
+			./yodo.sh
+		else
+			Scarica "b3rito/yodo" "$ENTRAW""b3rito/yodo/master/yodo.sh" "yodo.sh"
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
