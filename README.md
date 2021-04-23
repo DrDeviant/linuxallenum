@@ -18,6 +18,7 @@ Over 200 tools and utilities:
 - tunnelling;
 - evasion;
 - compatibility with MacOS;
+- run some scripts or binaries with default flags;
 
 and much more...
 
