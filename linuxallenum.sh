@@ -359,7 +359,12 @@ while true; do
 		Scarica "cytopia/pwncat" "$ENTRAW""cytopia/pwncat/master/bin/pwncat" "pwncat.py"
 	;;
 	"23")
-		Scarica "s0md3v/JShell/shell" "$ENTRAW""s0md3v/JShell/master/shell.py" "shell.py"
+		if [[ -f ./shell.py ]];
+		then
+			python ./shell.py
+		else
+			Scarica "s0md3v/JShell/shell" "$ENTRAW""s0md3v/JShell/master/shell.py" "shell.py"
+		fi
 	;;
 	"24")
 		echo "digit in your machine nc -lvnp 80 > file-received"
