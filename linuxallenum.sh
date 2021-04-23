@@ -1231,7 +1231,12 @@ while true; do
 		fi
 	;;
 	"227")
-		Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
+		if [[ -f ./traitor-arm64 ]];
+		then
+			traitor-arm64 -a -p
+		else
+			Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
+		fi
 	;;
 	"228")
 		Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
