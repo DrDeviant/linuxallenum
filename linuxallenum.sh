@@ -805,9 +805,14 @@ while true; do
 		whoami
 	;;
 	"162")
-		Scarica "TryCatchHCF/PacketWhisper/cloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/cloakify.py" "cloakify.py"
-		Scarica "TryCatchHCF/PacketWhisper/decloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/decloakify.py" "decloakify.py"
-		Scarica "TryCatchHCF/PacketWhisper/packetWhisper" "$ENTRAW""TryCatchHCF/PacketWhisper/master/packetWhisper.py" "packetWhisper.py"
+		if [[ -f ./packetWhisper.py ]];
+		then
+			python ./packetWhisper.py
+		else
+			Scarica "TryCatchHCF/PacketWhisper/cloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/cloakify.py" "cloakify.py"
+			Scarica "TryCatchHCF/PacketWhisper/decloakify" "$ENTRAW""TryCatchHCF/PacketWhisper/master/decloakify.py" "decloakify.py"
+			Scarica "TryCatchHCF/PacketWhisper/packetWhisper" "$ENTRAW""TryCatchHCF/PacketWhisper/master/packetWhisper.py" "packetWhisper.py"
+		fi
 	;;
 	"163")
 		Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_amd64.gz" "chisel_1.7.4_linux_amd64.gz"
