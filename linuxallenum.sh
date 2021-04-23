@@ -1239,7 +1239,12 @@ while true; do
 		fi
 	;;
 	"228")
-		Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
+		if [[ -f ./traitor-amd64 ]];
+		then
+			traitor-amd64 -a -p
+		else
+			Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
+		fi
 	;;
 	"229")
 		export PATH=$(pwd):$PATH
