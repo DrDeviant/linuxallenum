@@ -22,6 +22,9 @@ Over 200 tools and utilities:
 
 and much more...
 
+### How to run scripts and binaries with default flags?
+Choose a tool to download, then choose again to run it inside hacked machine!
+
 Please, share and starring my repos, follow me and... Happy hacking!
 
 Twitter: <a href="https://twitter.com/fabio_defilippo">@fabio_defilippo</a>
