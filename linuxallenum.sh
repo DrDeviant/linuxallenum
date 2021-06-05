@@ -78,6 +78,8 @@ while true; do
 	echo -ne " 20. skelsec/jackdaw\t\t\t\t\t139. DanMcInerney/icebreaker\n"
 	echo "ANTIFORENSICS - STEGANOGRAPHY"
 	echo -ne " 166. KuroLabs/stegcloak\n"
+	echo "AWS"
+	echo -ne " 231. smaranchand/bucky\n"
 	echo "CRACK"
 	echo -ne " 30. Greenwolf/spray\t\t\t\t\t31. NetSPI/PS_MultiCrack\t\t\t32. TiagoANeves/TDTLinuxPWD\n"
 	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\n"
@@ -1261,6 +1263,9 @@ while true; do
 		else
 			Scarica "b3rito/yodo" "$ENTRAW""b3rito/yodo/master/yodo.sh" "yodo.sh"
 		fi
+	;;
+	"231")
+		Scarica "smaranchand/bucky" "$ENTSSL""smaranchand/bucky/archive/refs/heads/master.zip" "bucky.zip"
 	;;
 	*)
 		echo "error, invalid choice"
