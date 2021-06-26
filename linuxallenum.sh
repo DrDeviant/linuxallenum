@@ -135,6 +135,8 @@ while true; do
 	echo -ne " 214. fatedier/frp_arm64\n"
 	echo "RAT"
 	echo -ne " 206. BenChaliah/Arbitrium-RAT\n"
+	echo "RDP"
+	echo -ne " 232. BSI-Bund/RdpCacheStitcher/RdpCacheStitcher-v1.1-linux64\n"
 	echo "REVSHELL"
 	echo -ne " 155. shahril96/socat-reverse-shell\t\t\t156. Doctor-love/revshell\n"
 	echo "SCANNING"
@@ -1266,6 +1268,9 @@ while true; do
 	;;
 	"231")
 		Scarica "smaranchand/bucky" "$ENTSSL""smaranchand/bucky/archive/refs/heads/master.zip" "bucky.zip"
+	;;
+	"232")
+		Scarica "BSI-Bund/RdpCacheStitcher-v1.1-linux64" "$ENTSSL""BSI-Bund/RdpCacheStitcher/releases/download/v1.1/RdpCacheStitcher-v1.1-linux64" "RdpCacheStitcher-v1.1-linux64"
 	;;
 	*)
 		echo "error, invalid choice"
