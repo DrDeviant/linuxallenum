@@ -19,6 +19,7 @@ Over 200 tools and utilities:
 - evasion;
 - compatibility with MacOS;
 - run some scripts or binaries with default flags;
+- interactive download of releases;
 
 and much more...
 
