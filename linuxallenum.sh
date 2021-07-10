@@ -1236,7 +1236,13 @@ while true; do
 		then
 			traitor-386 -a -p
 		else
-			Scarica "liamg/traitor-386" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-386" "traitor-386"
+			URT="liamg/traitor/releases"
+			URD="$URT""/download"
+			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-386"|awk -F \" '{print $2}')
+			do
+				Scarica "liamg/traitor-386" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-386" "traitor-386"
+				break
+			done
 		fi
 	;;
 	"227")
@@ -1244,7 +1250,13 @@ while true; do
 		then
 			traitor-arm64 -a -p
 		else
-			Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
+			URT="liamg/traitor/releases"
+			URD="$URT""/download"
+			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-arm64"|awk -F \" '{print $2}')
+			do
+				Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
+				break
+			done
 		fi
 	;;
 	"228")
@@ -1252,7 +1264,13 @@ while true; do
 		then
 			traitor-amd64 -a -p
 		else
-			Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
+			URT="liamg/traitor/releases"
+			URD="$URT""/download"
+			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-amd64"|awk -F \" '{print $2}')
+			do
+				Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
+				break
+			done
 		fi
 	;;
 	"229")
