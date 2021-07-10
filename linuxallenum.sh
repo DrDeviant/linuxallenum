@@ -850,7 +850,7 @@ while true; do
 		URD="$URT""/download"
 		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_amd64"|awk -F \" '{print $2}')
 		do
-			Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""$CHC" "chisel_1.7.4_linux_amd64.gz"
+			Scarica "jpillora/chisel_linux_amd64" "$ENTSSL""$CHC" "chisel_linux_amd64.gz"
 			break
 		done
 	;;
@@ -859,7 +859,7 @@ while true; do
 		URD="$URT""/download"
 		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_386"|awk -F \" '{print $2}')
 		do
-			Scarica "jpillora/chisel_1.7.4_linux_386" "$ENTSSL""$CHC" "chisel_1.7.4_linux_386.gz"
+			Scarica "jpillora/chisel_linux_386" "$ENTSSL""$CHC" "chisel_linux_386.gz"
 			break
 		done
 	;;
@@ -1205,22 +1205,22 @@ while true; do
 		fi
 	;;
 	"220")
-			echo "Digit a listen port"
-			read -p "(example, 8000): " LPORT
-			if [[ "$LPORT" != "" ]];
+		echo "Digit a listen port"
+		read -p "(example, 8000): " LPORT
+		if [[ "$LPORT" != "" ]];
+		then
+			echo "Digit an IP to redirect its connection"
+			read -p "(example, 192.168.0.3 or localhost): " IP
+			if [[ "$IP" != "" ]];
 			then
-				echo "Digit an IP to redirect its connection"
-				read -p "(example, 192.168.0.3 or localhost): " IP
-				if [[ "$IP" != "" ]];
+				echo "Digit the localhost's port"
+				read -p "(example, 1337): " PORT
+				if [[ "$PORT" != "" ]];
 				then
-					echo "Digit the localhost's port"
-					read -p "(example, 1337): " PORT
-					if [[ "$PORT" != "" ]];
-					then
-						ssh -L "$LPORT"":""$IP"":""$PORT"
-					fi
+					ssh -L "$LPORT"":""$IP"":""$PORT"
 				fi
 			fi
+		fi
 	;;
 	"221")
 		echo "Navigate to ""$ENTSSL""andrew-d/static-binaries/tree/master/binaries/linux/x86_64"
@@ -1312,7 +1312,13 @@ while true; do
 		Scarica "smaranchand/bucky" "$ENTSSL""smaranchand/bucky/archive/refs/heads/master.zip" "bucky.zip"
 	;;
 	"232")
-		Scarica "BSI-Bund/RdpCacheStitcher-v1.1-linux64" "$ENTSSL""BSI-Bund/RdpCacheStitcher/releases/download/v1.1/RdpCacheStitcher-v1.1-linux64" "RdpCacheStitcher-v1.1-linux64"
+		URT="BSI-Bund/RdpCacheStitcher/releases"
+		URD="$URT""/download"
+		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux64"|awk -F \" '{print $2}')
+		do
+			Scarica "BSI-Bund/RdpCacheStitcher-linux64" "$ENTSSL""$CHC" "RdpCacheStitcher-linux64"
+			break
+		done
 	;;
 	*)
 		echo "error, invalid choice"
