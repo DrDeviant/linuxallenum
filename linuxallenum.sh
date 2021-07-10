@@ -846,10 +846,22 @@ while true; do
 		fi
 	;;
 	"163")
-		Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_amd64.gz" "chisel_1.7.4_linux_amd64.gz"
+		URT="jpillora/chisel/releases"
+		URD="$URT""/download"
+		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_amd64"|awk -F \" '{print $2}')
+		do
+			Scarica "jpillora/chisel_1.7.4_linux_amd64" "$ENTSSL""$CHC" "chisel_1.7.4_linux_amd64.gz"
+			break
+		done
 	;;
 	"164")
-		Scarica "jpillora/chisel_1.7.4_linux_386" "$ENTSSL""jpillora/chisel/releases/download/v1.7.4/chisel_1.7.4_linux_386.gz" "chisel_1.7.4_linux_386.gz"
+		URT="jpillora/chisel/releases"
+		URD="$URT""/download"
+		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_386"|awk -F \" '{print $2}')
+		do
+			Scarica "jpillora/chisel_1.7.4_linux_386" "$ENTSSL""$CHC" "chisel_1.7.4_linux_386.gz"
+			break
+		done
 	;;
 	"165")
 		Scarica "pahaz/sshtunnel" "$ENTSSL""pahaz/sshtunnel/archive/master.zip" "sshtunnel.zip"
