@@ -82,7 +82,7 @@ while true; do
 	echo -ne " 231. smaranchand/bucky\n"
 	echo "CRACK"
 	echo -ne " 30. Greenwolf/spray\t\t\t\t\t31. NetSPI/PS_MultiCrack\t\t\t32. TiagoANeves/TDTLinuxPWD\n"
-	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\n"
+	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\t\t\t233. hashtopolis/agent-python\n"
 	echo "DNS"
 	echo -ne " 33. m57/dnsteal\n"
 	echo "DOCKER"
@@ -1319,6 +1319,9 @@ while true; do
 			Scarica "BSI-Bund/RdpCacheStitcher-linux64" "$ENTSSL""$CHC" "RdpCacheStitcher-linux64"
 			break
 		done
+	;;
+	"233")
+		Scarica "hashtopolis/agent-python" "$ENTSSL""hashtopolis/agent-python/archive/refs/heads/master.zip" "agent-python.zip"
 	;;
 	*)
 		echo "error, invalid choice"
