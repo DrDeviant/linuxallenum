@@ -20,6 +20,7 @@ Over 200 tools and utilities:
 - compatibility with MacOS;
 - run some scripts or binaries with default flags;
 - interactive download of releases;
+- agent for distributed cracking;
 
 and much more...
 
