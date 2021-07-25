@@ -813,7 +813,7 @@ while true; do
 	"159")
 		URT="DominicBreuker/pspy/releases"
 		URD="$URT""/download"
-		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy64s"|awk -F \" '{print $2}')
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy64s"|awk -F \" '{print $2}')
 		do
 			Scarica "DominicBreuker/pspy64s" "$ENTSSL""$CHC" "pspy64s"
 			break
@@ -822,7 +822,7 @@ while true; do
 	"160")
 		URT="DominicBreuker/pspy/releases"
 		URD="$URT""/download"
-		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy32s"|awk -F \" '{print $2}')
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "pspy32s"|awk -F \" '{print $2}')
 		do
 			Scarica "DominicBreuker/pspy32s" "$ENTSSL""$CHC" "pspy32s"
 			break
@@ -848,7 +848,7 @@ while true; do
 	"163")
 		URT="jpillora/chisel/releases"
 		URD="$URT""/download"
-		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_amd64"|awk -F \" '{print $2}')
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_amd64"|awk -F \" '{print $2}')
 		do
 			Scarica "jpillora/chisel_linux_amd64" "$ENTSSL""$CHC" "chisel_linux_amd64.gz"
 			break
@@ -857,7 +857,7 @@ while true; do
 	"164")
 		URT="jpillora/chisel/releases"
 		URD="$URT""/download"
-		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_386"|awk -F \" '{print $2}')
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux_386"|awk -F \" '{print $2}')
 		do
 			Scarica "jpillora/chisel_linux_386" "$ENTSSL""$CHC" "chisel_linux_386.gz"
 			break
