@@ -1262,7 +1262,7 @@ while true; do
 		else
 			URT="liamg/traitor/releases"
 			URD="$URT""/download"
-			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-386"|awk -F \" '{print $2}')
+			select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-386"|awk -F \" '{print $2}')
 			do
 				Scarica "liamg/traitor-386" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-386" "traitor-386"
 				break
@@ -1276,7 +1276,7 @@ while true; do
 		else
 			URT="liamg/traitor/releases"
 			URD="$URT""/download"
-			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-arm64"|awk -F \" '{print $2}')
+			select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-arm64"|awk -F \" '{print $2}')
 			do
 				Scarica "liamg/traitor-arm64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-arm64" "traitor-arm64"
 				break
@@ -1290,7 +1290,7 @@ while true; do
 		else
 			URT="liamg/traitor/releases"
 			URD="$URT""/download"
-			select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-amd64"|awk -F \" '{print $2}')
+			select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "traitor-amd64"|awk -F \" '{print $2}')
 			do
 				Scarica "liamg/traitor-amd64" "$ENTSSL""liamg/traitor/releases/download/v0.0.2/traitor-amd64" "traitor-amd64"
 				break
@@ -1314,7 +1314,7 @@ while true; do
 	"232")
 		URT="BSI-Bund/RdpCacheStitcher/releases"
 		URD="$URT""/download"
-		select CHC in $(curl "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux64"|awk -F \" '{print $2}')
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linux64"|awk -F \" '{print $2}')
 		do
 			Scarica "BSI-Bund/RdpCacheStitcher-linux64" "$ENTSSL""$CHC" "RdpCacheStitcher-linux64"
 			break
