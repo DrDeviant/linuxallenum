@@ -130,6 +130,7 @@ while true; do
 	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\t\t\t\t226. liamg/traitor-386\n"
 	echo -ne " 224. swisskyrepo/PayloadsAllTheThings/Mathodology_and_Resources/Linux-PrivilegeEscalation\n"
 	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\t\t\t\t230. b3rito/yodo\n"
+	echo -ne " 234. Liang2580/CVE-2021-33909"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
 	echo -ne " 214. fatedier/frp_arm64\n"
@@ -1322,6 +1323,9 @@ while true; do
 	;;
 	"233")
 		Scarica "hashtopolis/agent-python" "$ENTSSL""hashtopolis/agent-python/archive/refs/heads/master.zip" "agent-python.zip"
+	;;
+	"234")
+		Scarica "Liang2580/CVE-2021-33909" "$ENTRAW""Liang2580/CVE-2021-33909/main/exploit.c" "sequoia.c"
 	;;
 	*)
 		echo "error, invalid choice"
