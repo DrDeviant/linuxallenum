@@ -4,6 +4,7 @@ this bash script is for remote linux, unix and macos hosts hacked!
 ## Warning:
 1. this script will download other tools; be careful!
 2. if you want hack an host, before use <a href="https://github.com/FabioDefilippo/linuxallremote/blob/master/linuxallremote.sh">linuxallremote</a> from my repositories!
+3. <strong>Some of these tools could be run automatically</strong>
 
 ## Note:
 these scripts will change critically hacked host!
