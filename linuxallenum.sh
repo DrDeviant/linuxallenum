@@ -56,8 +56,13 @@ function Scarica
 	fi
 	if [[ -f ./$3 ]];
 	then
-		chmod +x ./$3
-		echo "$3"" downloaded and runnable!"
+		if [[ "$3" == *".zip" ]];
+		then
+			unzip ./$3
+		else
+			chmod +x ./$3
+			echo "$3"" downloaded and runnable!"
+		fi
 	else
 		echo "ERROR: download failed"
 	fi
