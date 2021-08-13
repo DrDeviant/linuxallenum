@@ -1,5 +1,6 @@
 # linuxallenum
-this bash script is for remote linux, unix and macos hosts hacked!
+this bash script is for <strong>REMOTE</strong> linux, unix and macos hosts <strong>HACKED</strong>!
+<h3>THIS SCRIPT IS FOR OTHER HOSTS, NOT USE IN LOCAL HOST! ONCE USED, WIPE THE STORAGE AND RE-INSTALL THE OS</h3>
 
 ## Warning:
 1. this script will download other tools; be careful!
@@ -22,6 +23,7 @@ Over 200 tools and utilities:
 - run some scripts or binaries with default flags;
 - interactive download of releases;
 - agent for distributed cracking;
+- automatic extraction for downloaded zip files;
 
 and much more...
 
