@@ -123,6 +123,8 @@ while true; do
 	echo -ne " 131. mlgualtieri/NTLMRawUnHide\n"
 	echo "JAVASCRIPT"
 	echo -ne " 23. s0md3v/JShell/shell\n"
+	echo "KUBERNETES"
+	echo " 235. armosec/kubescape\n"
 	echo "LDAP"
 	echo -ne " 40. dinigalab/ldapsearch\n"
 	echo "MISC"
@@ -1332,6 +1334,15 @@ while true; do
 	"234")
 		Scarica "Liang2580/CVE-2021-33909" "$ENTRAW""Liang2580/CVE-2021-33909/main/exploit.c" "sequoia.c"
 		gcc sequoia.c -o sequoia;chmod +x sequoia;mkdir dir;./sequoia $(pwd)/dir
+	;;
+	"235")
+		URT="armosec/kubescape/releases"
+		URD="$URT""/download"
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "kubescape"|awk -F \" '{print $2}')
+		do
+			Scarica "armosec/kubescape" "$ENTSSL""$CHC" "kubescape"
+			break
+		done
 	;;
 	*)
 		echo "error, invalid choice"
