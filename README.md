@@ -12,7 +12,7 @@ these scripts will change critically hacked host!
 
 Over 200 tools and utilities:
 - delete logs;
-- local privesc;
+- many local privesc techniques;
 - local exploits;
 - dump credentials and packets;
 - enumerations;
