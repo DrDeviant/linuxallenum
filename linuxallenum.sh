@@ -190,7 +190,7 @@ while true; do
 	echo -ne " 271. PrivEsc with cowsay\t\t\t\t272. PrivEsc with cowthink\t\t\t273. PrivEsc with cp\n"
 	echo -ne " 274. PrivEsc with cpan\t\t\t\t\t275. PrivEsc with cpio\t\t\t\t276. PrivEsc with cpulimit\n"
 	echo -ne " 277. PrivEsc with crash\t\t\t\t278. PrivEsc with crontab\t\t\t279. PrivEsc with csh\n"
-	echo -ne " 280. Clear PageCache, dEntries and iNodes\n"
+	echo -ne " 280. Clear PageCache, dEntries, Swap and iNodes\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1638,6 +1638,7 @@ while true; do
 	;;
 	"280")
 		sync; echo 3 > /proc/sys/vm/drop_caches
+		swapoff -a && swapon -a
 	;;
 	*)
 		echo "error, invalid choice"
