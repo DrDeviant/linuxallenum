@@ -10,9 +10,9 @@ this bash script is for <strong>REMOTE</strong> linux, unix and macos hosts <str
 ## Note:
 these scripts will change critically hacked host!
 
-Over 300 tools and utilities:
+Over <strong>400</strong> tools and utilities:
 - delete logs;
-- many local PrivEsc techniques;
+- many local PrivEsc techniques (thanks to <a href="https://gtfobins.github.io/">gtfobins</a>);
 - local exploits;
 - dump credentials and grab packets;
 - enumerations;
