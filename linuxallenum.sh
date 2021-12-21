@@ -129,7 +129,7 @@ while true; do
 	echo -ne " 154. TH3xACE/SUDO_KILLER\t\t\t\t109. nongiach/sudo_inject\t\t\t226. liamg/traitor-386\n"
 	echo -ne " 224. swisskyrepo/PayloadsAllTheThings/Mathodology_and_Resources/Linux-PrivilegeEscalation\n"
 	echo -ne " 227. liamg/traitor-arm64\t\t\t\t228. liamg/traitor-amd64\t\t\t230. b3rito/yodo\n"
-	echo -ne " 234. Liang2580/CVE-2021-33909\n"
+	echo -ne " 234. Liang2580/CVE-2021-33909\t\t\t\t479. lightfaith/locasploit\n"
 	echo "PROXY - REVPROXY"
 	echo -ne " 211. fatedier/frp_386\t\t\t\t\t212. fatedier/frp_amd64\t\t\t\t213. fatedier/frp_arm\n"
 	echo -ne " 214. fatedier/frp_arm64\n"
@@ -442,7 +442,7 @@ while true; do
 		fi
 	;;
 	"20")
-		Scarica "skelsec/jackdaw/" "$ENTSSL""skelsec/jackdaw/archive/master.zip" "jackdaw.zip"
+		Scarica "skelsec/jackdaw" "$ENTSSL""skelsec/jackdaw/archive/master.zip" "jackdaw.zip"
 	;;
 	"21")
 		Scarica "T3rry7f/ICMPTunnel/IcmpTunnel_C" "$ENTRAW""T3rry7f/ICMPTunnel/master/IcmpTunnel_C.py" "IcmpTunnel_C.py"
@@ -800,7 +800,7 @@ while true; do
 					read -p "(example, 1337): " PORT
 					if [[ "$PORT" != "" ]];
 					then
-						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
+						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
 					fi
 				fi
 			fi
@@ -823,7 +823,7 @@ while true; do
 							read -p "(example, 1337): " PORT
 							if [[ "$PORT" != "" ]];
 							then
-								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
+								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
 							fi
 						fi
 					fi
@@ -2746,6 +2746,18 @@ while true; do
 		then
 			$CURLP -s -k -L "https://gtfobins.github.io/gtfobins/""$SDCMD""/#sudo" | less
 		fi
+	;;
+	"478")
+		URT="spencerdodd/kernelpop/releases"
+		URD="$URT""/download"
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "kernelpop-macos-highsierra-x64"|awk -F \" '{print $2}')
+		do
+			Scarica "spencerdodd/kernelpop" "$ENTSSL""$CHC" "kernelpop-macos-highsierra-x64"
+			break
+		done
+	;;
+	"479")
+		Scarica "lightfaith/locasploit" "$ENTSSL""lightfaith/locasploit/archive/refs/heads/master.zip" "locasploit.zip"
 	;;
 	*)
 		echo "error, invalid choice"
