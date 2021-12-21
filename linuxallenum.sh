@@ -800,7 +800,7 @@ while true; do
 					read -p "(example, 1337): " PORT
 					if [[ "$PORT" != "" ]];
 					then
-						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
+						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
 					fi
 				fi
 			fi
@@ -823,7 +823,7 @@ while true; do
 							read -p "(example, 1337): " PORT
 							if [[ "$PORT" != "" ]];
 							then
-								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
+								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
 							fi
 						fi
 					fi
