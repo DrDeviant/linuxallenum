@@ -89,7 +89,7 @@ while true; do
 	echo -ne " 50. volatilityfoundation/volatility\t\t\t140. nyov/python-ffpassdecrypt\t\t\t141. pradeep1288/ffpasscracker/ffpassdecrypt\n"
 	echo -ne " 149. louisabraham/ffpass\t\t\t\t150. aarsakian/MFTExtractor\t\t\t158. mikeborghi/pywallet\n"
 	echo -ne " 162. TryCatchHCF/PacketWhisper\t\t\t\t180. hasanbulat/tshark/dumpcap (amd64)\t\t207. moonD4rk/HackBrowserData-32bit\n"
-	echo -ne " 208. moonD4rk/HackBrowserData-64bit\n"
+	echo -ne " 208. moonD4rk/HackBrowserData-64bit\t\t\t480. rek7/mXtract\n"
 	echo "ENUMERATION"
 	echo -ne " 1. rebootuser/LinEnum\t\t\t\t\t134. jtpereyda/enum4linux\t\t\t2. Arr0way/linux-local-enumeration-script\n"
 	echo -ne " 3. sleventyeleven/linuxprivchecker\t\t\t4. jondonas/linux-exploit-suggester-2\t\t5. TheSecondSun/Bashark\n"
@@ -800,7 +800,7 @@ while true; do
 					read -p "(example, 1337): " PORT
 					if [[ "$PORT" != "" ]];
 					then
-						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
+						socat TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
 					fi
 				fi
 			fi
@@ -823,7 +823,7 @@ while true; do
 							read -p "(example, 1337): " PORT
 							if [[ "$PORT" != "" ]];
 							then
-								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT &
+								$SOCAT TCP-LISTEN:$LPORT,fork TCP:$IP:$PORT
 							fi
 						fi
 					fi
@@ -2758,6 +2758,9 @@ while true; do
 	;;
 	"479")
 		Scarica "lightfaith/locasploit" "$ENTSSL""lightfaith/locasploit/archive/refs/heads/master.zip" "locasploit.zip"
+	;;
+	"480")
+		Scarica "rek7/mXtract" "ENTSSL""rek7/mXtract/archive/refs/heads/master.zip" "mXtract.zip"
 	;;
 	*)
 		echo "error, invalid choice"
