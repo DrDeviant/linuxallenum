@@ -296,7 +296,14 @@ while true; do
 		Scarica "mzet-/linux-exploit-suggester" "$ENTRAW""mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh" "linux-exploit-suggester.sh"
 	;;
 	"8")
-		Scarica "carlospolop/privilege-escalation-awesome-scripts-suite/linPEAS" "$ENTRAW""carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh" "linpeas.sh"
+		##Scarica "carlospolop/privilege-escalation-awesome-scripts-suite/linPEAS" "$ENTRAW""carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh" "linpeas.sh"
+		URT="carlospolop/PEASS-ng/releases"
+		URD="$URT""/download"
+		select CHC in $(curl -s -k -L "$ENTSSL""$URT"|grep "href"|grep "$URD"|grep "linpeas"|awk -F \" '{print $2}')
+		do
+			Scarica "carlospolop/PEASS-ng/linpeas" "$ENTSSL""$CHC" "linpeas"
+			break
+		done
 	;;
 	"9")
 		Scarica "InteliSecureLabs/Linux_Exploit_Suggester/Linux_Exploit_Suggester" "$ENTRAW""InteliSecureLabs/Linux_Exploit_Suggester/master/Linux_Exploit_Suggester.pl" "Linux_Exploit_Suggester.pl"
